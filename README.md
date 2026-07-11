@@ -17,7 +17,7 @@ I'm looking for an internship where I can continue learning, gain hands-on exper
 
 ---
 
-## kills
+## Skills
 
 ### Business Analysis
 
