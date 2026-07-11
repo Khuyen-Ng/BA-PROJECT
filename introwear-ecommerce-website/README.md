@@ -1,33 +1,33 @@
-# INTROWEAR – Website Thương mại Điện tử Thời trang
+# INTROWEAR – Fashion E-commerce Website
 
-Hệ thống thương mại điện tử trên nền tảng web được phát triển dưới dạng dự án nhóm tại trường đại học, nhằm hỗ trợ hoạt động mua sắm thời trang trực tuyến và quản lý đơn hàng.
+A web-based fashion e-commerce system developed as a university team project to support online shopping and order management.
 
-## Vai trò
+## Role
 
 **Business Analyst & Developer**
 
-## Tổng quan dự án
+## Project Overview
 
-Dự án được xây dựng nhằm mang đến cho khách hàng trải nghiệm mua sắm trực tuyến hoàn chỉnh, bao gồm xem sản phẩm, tìm kiếm, đặt hàng, thanh toán và theo dõi đơn hàng. Bên cạnh đó, hệ thống còn hỗ trợ quản trị viên quản lý sản phẩm, khách hàng và đơn hàng một cách hiệu quả.
+The project was designed to provide customers with a seamless online shopping experience, including product browsing, searching, ordering, payment, and order tracking. It also enables administrators to efficiently manage products, customers, and orders through a centralized management system.
 
-## Trách nhiệm
+## Responsibilities
 
 ### Business Analysis
 
-* Thu thập và phân tích yêu cầu nghiệp vụ.
-* Xác định yêu cầu chức năng và phân tích quy trình nghiệp vụ.
-* Xây dựng **Use Case Diagram** và **Use Case Specification**.
-* Thiết kế **Entity Relationship Diagram (ERD)**.
-* Thiết kế giao diện (UI Mockup) bằng **Figma**.
+* Gathered and analyzed business requirements from project stakeholders.
+* Identified functional requirements and analyzed key business processes.
+* Created **Use Case Diagrams** and **Use Case Specifications** to define system behavior.
+* Designed the **Entity Relationship Diagram (ERD)** for the database.
+* Produced **UI mockups** and user interface designs using **Figma**.
 
-### Phát triển hệ thống
+### System Development
 
-* Thiết kế cơ sở dữ liệu cho **Đơn hàng (Orders)** và **Chi tiết đơn hàng (Order Items)**.
-* Phát triển chức năng tạo đơn hàng và xác nhận đơn hàng.
-* Xây dựng module quản lý đơn hàng, bao gồm tìm kiếm, lọc và cập nhật trạng thái đơn hàng.
-* Phát triển trang quản trị (Admin Dashboard) để thống kê đơn hàng và doanh thu.
+* Designed and implemented the database structure.
+* Developed the order creation and order confirmation features.
+* Built the order management module, including search, filtering, and order status updates.
+* Developed the **Admin Dashboard** for order management and sales reporting.
 
-## Công nghệ sử dụng
+## Technologies
 
 * Laravel
 * PHP
@@ -38,31 +38,27 @@ Dự án được xây dựng nhằm mang đến cho khách hàng trải nghiệ
 * Draw.io
 * Git & GitHub
 
-## Cấu trúc Repository
+## Repository Structure
 
 ```text
 docs/
-├── Use Case Diagram
-├── Use Case Specification
-├── ERD
-├── UI Mockups
+├── diagrams/
+├── specifications/
+├── ERD/
+└── ui-mockups/
 
 database/
-├── ERD
-├── SQL Scripts
+├── ERD/
+└── sql-scripts/
 
 src/
-├── Laravel Source Code
+└── Laravel Source Code
 ```
 
-## Hình ảnh minh họa
+## Team
 
-> Thêm hình ảnh của Trang chủ, Trang sản phẩm, Trang quản lý đơn hàng và Admin Dashboard tại đây.
-
-## Nhóm thực hiện
-
-Dự án được thực hiện bởi nhóm sinh viên Trường Đại học Công nghệ Thông tin – Đại học Quốc gia TP.HCM (UIT – VNU-HCM). Những nội dung được liệt kê ở trên là phần công việc mình trực tiếp đảm nhận.
+This project was completed by a student team from the University of Information Technology (UIT), Vietnam National University Ho Chi Minh City (VNU-HCM). The responsibilities listed above represent my individual contributions to the project.
 
 ---
 
-Nếu bạn có bất kỳ câu hỏi nào về dự án, vui lòng liên hệ với mình qua GitHub hoặc LinkedIn.
+If you have any questions about this project, feel free to connect with me via GitHub or LinkedIn.

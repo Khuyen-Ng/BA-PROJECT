@@ -3,7 +3,7 @@
 Tài liệu mô tả cấu trúc cơ sở dữ liệu của hệ thống INTROWEAR, bao gồm sơ đồ ERD và đặc tả chi tiết từng bảng.
 ---
 
-## 📊 Sơ đồ ERD (Entity Relationship Diagram)
+## Sơ đồ ERD (Entity Relationship Diagram)
 
 ```mermaid
 erDiagram

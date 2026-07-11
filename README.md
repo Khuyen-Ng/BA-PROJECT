@@ -1,52 +1,52 @@
-# Xin chào, mình là Nguyễn Thị Ý Khuyên
+# Hi, I'm Nguyen Thi Y Khuyen 
 
-**Sinh viên năm 3 ngành Thương mại Điện tử, Khoa Hệ thống Thông tin**
-**Trường Đại học Công nghệ Thông tin – ĐHQG TP.HCM (UIT)**
-TP. Hồ Chí Minh, Việt Nam
-Định hướng phát triển ở vị trí **Business Analyst**
-
----
-
-## Giới thiệu
-
-Mình là sinh viên năm 3 ngành Thương mại Điện tử, có định hướng phát triển trong lĩnh vực **Business Analysis**.
-
-Thông qua các dự án học tập và dự án cá nhân, mình đã thực hành quy trình phân tích nghiệp vụ, bao gồm thu thập và phân tích yêu cầu, mô hình hóa quy trình nghiệp vụ, xây dựng các sơ đồ UML, viết Use Case Specification và thiết kế giao diện bằng Figma.
-
-Hiện mình đang tìm kiếm cơ hội **thực tập Business Analyst** để học hỏi kinh nghiệm thực tế, nâng cao chuyên môn và đóng góp vào quá trình phát triển sản phẩm phần mềm.
+Third-year E-commerce student, Faculty of Information Systems
+University of Information Technology (VNU-HCM)
+Ho Chi Minh City, Vietnam
+Looking for a Business Analyst Internship
 
 ---
 
-## Kỹ năng
+## About Me
+
+I'm a third-year student majoring in E-commerce with an interest in Business Analysis.
+
+Through academic and personal projects, I have practiced gathering requirements, analyzing business processes, creating UML diagrams, writing Use Case Specifications, and designing wireframes in Figma.
+
+I'm looking for an internship where I can continue learning, gain hands-on experience, and contribute to software projects as a Business Analyst.
+
+---
+
+## kills
 
 ### Business Analysis
 
-* Thu thập và phân tích yêu cầu (Requirement Gathering & Analysis)
+* Requirement Gathering & Analysis
 * User Story
 * Acceptance Criteria
 * Use Case Specification
 
-### Mô hình hóa hệ thống
+### System Modeling
 
-* UML (Use Case Diagram, Activity Diagram, Sequence Diagram, Class Diagram)
+* UML (Use Case, Activity, Sequence, Class Diagram)
 * BPMN
 * ERD (Entity Relationship Diagram)
 
-### Thiết kế giao diện
+### UI Design
 
 * Wireframe
 * Mockup
 * Figma
 
-### Kỹ năng kỹ thuật
+### Technical Skills
 
 * SQL
-* PHP (Cơ bản)
-* Python (Cơ bản)
+* PHP (Basic)
+* Python (Basic)
 * HTML/CSS
 * MySQL
 
-### Công cụ
+### Tools
 
 * Figma
 * Draw.io
@@ -56,43 +56,45 @@ Hiện mình đang tìm kiếm cơ hội **thực tập Business Analyst** để
 
 ---
 
-## Dự án
+## Projects
 
-### Triển khai hệ thống CRM/ERP với Odoo
+### CRM/ERP Deployment with Odoo
 
-* Phân tích quy trình nghiệp vụ trước khi triển khai hệ thống.
-* Mô hình hóa quy trình CRM, Bán hàng, Mua hàng và Kho bằng BPMN.
-* Cấu hình các phân hệ Odoo và hỗ trợ kiểm thử quy trình nghiệp vụ.
+* Analyzed business processes before system implementation.
+* Modeled CRM, Sales, Purchasing, and Inventory workflows using BPMN.
+* Configured Odoo modules and supported business process testing.
 
-### Website đặt in ảnh theo yêu cầu
+### Custom Photo Printing Website
 
-* Thu thập và phân tích yêu cầu nghiệp vụ.
-* Xây dựng Use Case Diagram và Use Case Specification.
-* Thiết kế giao diện bằng Figma.
-* Xây dựng Sequence Diagram và Class Diagram.
-* Tham gia phát triển các chức năng tải ảnh, tùy chỉnh sản phẩm, xem trước và đặt hàng.
+* Gathered and analyzed business requirements.
+* Created Use Case Diagrams and detailed Use Case Specifications.
+* Designed UI mockups using Figma.
+* Built Sequence Diagrams and Class Diagrams.
+* Participated in developing image upload, product customization, preview, and ordering features.
 
-### Website thương mại điện tử thời trang
+### Fashion E-commerce Website
 
-* Phân tích yêu cầu hệ thống.
-* Thiết kế Use Case Diagram và ERD.
-* Thiết kế giao diện bằng Figma.
-* Tham gia phát triển các chức năng dành cho khách hàng và quản trị viên.
-
----
-
-## Chứng chỉ
-
-* **TOEIC Listening & Reading: 865/990**
+* Analyzed system requirements.
+* Designed Use Case Diagrams and ERD.
+* Created UI mockups in Figma.
+* Participated in developing both customer and admin features.
 
 ---
 
-## Liên hệ
+## Certificate
 
-Email: **[yykhuyenn27@gmail.com](mailto:yykhuyenn27@gmail.com)**
-
-LinkedIn: *(Thêm đường dẫn LinkedIn của bạn)*
+* TOEIC Listening & Reading: **865/990**
 
 ---
 
-Cảm ơn bạn đã ghé thăm GitHub của mình!
+## Contact
+
+Email: [yykhuyenn27@gmail.com](mailto:yykhuyenn27@gmail.com)
+
+LinkedIn: *Add your LinkedIn profile*
+
+Thank you for visiting my GitHub profile.
+
+
+
+
