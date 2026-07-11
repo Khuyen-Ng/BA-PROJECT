@@ -44,12 +44,7 @@ The project was designed to provide customers with a seamless online shopping ex
 docs/
 ├── diagrams/
 ├── specifications/
-├── ERD/
 └── ui-mockups/
-
-database/
-├── ERD/
-└── sql-scripts/
 
 src/
 └── Laravel Source Code

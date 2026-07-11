@@ -1,6 +1,6 @@
 # Use Case Specifications — Introwear E-Commerce System
 
-> Each use case follows a standard specification template: **ID, Name (Verb + Noun), Actor(s), Description (user story format), Priority, Trigger, Preconditions, Postconditions (Success/Failure), Basic Flow, Alternative Flow, Exception Flow, Business Rules, Special Requirements, Frequency of Use, Assumptions/Notes.** Flows use the common numbering convention: Basic Flow = `1, 2, 3…`; each Alternative/Exception Flow is labeled `A1, A2…` / `E1, E2…` with sub-steps `A1.1, A1.2…` / `E1.1, E1.2…`, and each branch states where it splits from and rejoins the Basic Flow.
+> Each use case follows a standard specification template: **ID, Name (Verb + Noun), Actor(s), Description (user story format), Priority, Trigger, Preconditions, Postconditions (Success/Failure), Basic Flow, Alternative Flow, Exception Flow, Business Rules.** Flows use the common numbering convention: Basic Flow = `1, 2, 3…`; each Alternative/Exception Flow is labeled `A1, A2…` / `E1, E2…` with sub-steps `A1.1, A1.2…` / `E1.1, E1.2…`, and each branch states where it splits from and rejoins the Basic Flow.
 
 ## Table of Contents
 
@@ -48,9 +48,6 @@
 | **Alternative Flow** | **A1** (branches from step 1) — Register via Google/Facebook:<br>A1.1 The user selects "Sign up with Google" or "Sign up with Facebook."<br>A1.2 The system redirects to the third-party authentication interface.<br>A1.3 After successful authentication, the system saves the account and logs the user in automatically.<br>A1.4 The user can use the system. *(Use case ends)* |
 | **Exception Flow** | **E1** (branches from step 5) — Email already exists: displays "The email has already been taken." → returns to step 3.<br>**E2** (branches from step 5) — Phone already exists: displays "The phone has already been taken." → returns to step 3.<br>**E3** (branches from step 5) — Password under 8 characters: displays "The password field must be at least 8 characters." → returns to step 3.<br>**E4** (branches from step 5) — Password confirmation mismatch: displays "The password field confirmation does not match." → returns to step 3.<br>**E5** (branches from step 3) — User exits the registration page: the system cancels the process and discards the entered data. *(Use case ends)* |
 | **Business Rules** | BR-1: Email and phone number must be unique across all accounts.<br>BR-2: Password must be ≥ 8 characters. |
-| **Special Requirements** | Passwords must be stored in hashed/encrypted form; registration form must validate input client-side and server-side. |
-| **Frequency of Use** | High — performed by every new visitor. |
-| **Assumptions/Notes** | *Priority, Business Rules, Special Requirements, and Frequency of Use were added to complete the specification; they were not present in the original source document.* |
 
 ---
 
@@ -68,12 +65,9 @@
 | **Postconditions (Success)** | POST-1: The user is authenticated and redirected to the homepage in a logged-in state. |
 | **Postconditions (Failure)** | The user remains unauthenticated; login state is unchanged. |
 | **Basic Flow** | 1. The user clicks "Log In."<br>2. The system displays the login page.<br>3. The user enters email and password.<br>4. The user confirms the login.<br>5. The system validates the credentials.<br>6. The system logs the user in and redirects to the homepage.<br>7. The user accesses logged-in features. |
-| **Alternative Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 2) — Log in via Google/Facebook:<br>A1.1 The user selects "Log in with Google" or "Log in with Facebook."<br>A1.2 The system redirects to the third-party authentication interface.<br>A1.3 After successful authentication, the system logs the user in and redirects to the homepage. *(Rejoins at step 6)* |
 | **Exception Flow** | **E1** (branches from step 5) — Incorrect credentials: displays "These credentials do not match our records." → returns to step 3.<br>**E2** (branches from step 4) — Required field left empty: displays a message requesting email/phone and password. → returns to step 3.<br>**E3** (branches from step 2) — User leaves the login page: the system cancels the login process without altering login state. *(Use case ends)* |
 | **Business Rules** | BR-1: Account must be locked or throttled after repeated failed login attempts (recommended). |
-| **Special Requirements** | Session/token must be securely generated on successful login. |
-| **Frequency of Use** | Very High — performed on every visit by returning users. |
-| **Assumptions/Notes** | Account lockout rule (BR-1) is a recommended addition, not specified in the original document. |
 
 ---
 
@@ -91,12 +85,9 @@
 | **Postconditions (Success)** | POST-1: The session is terminated; the user is redirected to the homepage in a guest state. |
 | **Postconditions (Failure)** | The user remains logged in. |
 | **Basic Flow** | 1. The logged-in user clicks the user icon (top-right corner).<br>2. The system navigates to "My Account."<br>3. The user clicks "Logout."<br>4. The system clears the session.<br>5. The system redirects to the homepage; the user's status becomes guest. |
-| **Alternative Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 1) — Logout directly from the account dropdown menu without opening "My Account": the user selects "Logout" from the dropdown. *(Rejoins at step 4)* |
 | **Exception Flow** | **E1** (branches from step 2) — The user returns to the homepage without clicking "Logout": the login state remains unchanged. *(Use case ends)* |
 | **Business Rules** | BR-1: All session tokens/cookies must be invalidated upon logout. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Medium. |
-| **Assumptions/Notes** | BR-1 added to complete the specification. |
 
 ---
 
@@ -114,12 +105,9 @@
 | **Postconditions (Success)** | POST-1: The product list is displayed on the "Shop" page. |
 | **Postconditions (Failure)** | No product list is displayed; an error or empty state is shown. |
 | **Basic Flow** | 1. The user accesses the website.<br>2. The user clicks "Shop" on the navigation bar.<br>3. The system retrieves all products from the database.<br>4. The system displays the product list: name, image, price, "View Details," and "Add to Cart." |
-| **Alternative Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 1) — User reaches the product list via a category banner or promotional link on the homepage instead of the "Shop" nav link. *(Rejoins at step 3)* |
 | **Exception Flow** | **E1** (branches from step 3) — No products available: the system displays a blank page.<br>**E2** (branches from step 3) — Database connection error: displays "Unable to load product, please try again." |
 | **Business Rules** | BR-1: Only products marked as active/in-stock or available for sale are shown. |
-| **Special Requirements** | Product list should support pagination or lazy loading for performance. |
-| **Frequency of Use** | Very High. |
-| **Assumptions/Notes** | BR-1 and Special Requirements added to complete the specification. |
 
 ---
 
@@ -137,12 +125,9 @@
 | **Postconditions (Success)** | POST-1: The product detail page is displayed with full information. |
 | **Postconditions (Failure)** | The product detail page is not shown; an error message is displayed. |
 | **Basic Flow** | 1. The user is on the product list page.<br>2. The user clicks "Quick View" for a product.<br>3. The system navigates to the "Product Detail" page.<br>4. The system displays: name, images, price, quantity selector, "Add to Cart," "Buy Now," description, size, shipping policy, return policy. |
-| **Alternative Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 2) — User opens the product detail page directly via a shared link or search result instead of clicking "Quick View." *(Rejoins at step 3)* |
 | **Exception Flow** | **E1** (branches from step 3) — Product no longer exists (deleted): displays a message stating the product does not exist.<br>**E2** (branches from step 3) — Database connection error: displays "Unable to load product, please try again." |
 | **Business Rules** | BR-1: Deleted or out-of-stock products must not be accessible via direct link. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Very High. |
-| **Assumptions/Notes** | BR-1 added to complete the specification. |
 
 ---
 
@@ -163,9 +148,6 @@
 | **Alternative Flow** | **A1** (branches from step 2) — Auto-suggestion while typing:<br>A1.1 As the user types each character, the system displays products whose names start with or contain the keyword.<br>A1.2 The user selects a suggested product directly to go to its detail page. *(Use case ends)* |
 | **Exception Flow** | **E1** (branches from step 3) — No matching product found: the system displays no results.<br>**E2** (branches from step 3) — Database connection error: displays "Unable to load product, please try again." |
 | **Business Rules** | BR-1: Search should be case-insensitive and accent-insensitive (for Vietnamese product names). |
-| **Special Requirements** | Search response time should be near-instant to support live auto-suggestion. |
-| **Frequency of Use** | High. |
-| **Assumptions/Notes** | BR-1 and Special Requirements added to complete the specification. |
 
 ---
 
@@ -186,9 +168,6 @@
 | **Alternative Flow** | **A1** (branches from step 3) — User changes filter criteria repeatedly: the system updates the list immediately after each change and returns to step 3. |
 | **Exception Flow** | **E1** (branches from step 4) — No matching products after filtering: the system displays a blank page.<br>**E2** (branches from step 4) — Database connection error: displays "Unable to load product, please try again." |
 | **Business Rules** | BR-1: "Best-selling" ranking is based on total units sold across delivered orders. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Medium. |
-| **Assumptions/Notes** | BR-1 added to complete the specification (assumption on ranking logic). |
 
 ---
 
@@ -209,9 +188,6 @@
 | **Alternative Flow** | **A1** (branches from step 3) — Add via "Buy Now" on the detail page: the system adds the product to the cart and proceeds directly to the checkout page. *(Use case ends)*<br>**A2** (branches from step 5) — Product already in the cart: the system increases the existing line item's quantity instead of creating a new one. → resumes at step 6. |
 | **Exception Flow** | **E1** (branches from step 4) — Product out of stock: the system displays an out-of-stock notification.<br>**E2** (branches from step 4) — Required options not selected: the system requests the user to complete the product options.<br>**E3** (branches from step 5) — Error adding to cart: the system displays a message stating the product could not be added; please try again. |
 | **Business Rules** | BR-1: Cart quantity for a product cannot exceed available stock. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Very High. |
-| **Assumptions/Notes** | BR-1 added to complete the specification. |
 
 ---
 
@@ -232,9 +208,6 @@
 | **Alternative Flow** | **A1** (branches from step 2) — Decreasing quantity to 1 and clicking "–" again: the system removes the product from the cart. *(Continues at UC-10)* |
 | **Exception Flow** | **E1** (branches from step 3) — Quantity exceeds available stock: the system notifies the user that the requested quantity exceeds stock. → returns to step 2.<br>**E2** (branches from step 3) — Quantity entered or set to a negative number: the system does not allow the change and retains the previous quantity. → returns to step 2. |
 | **Business Rules** | BR-1: Minimum allowed quantity per item is 1 (below that, the item is removed, see UC-10). |
-| **Special Requirements** | None. |
-| **Frequency of Use** | High. |
-| **Assumptions/Notes** | BR-1 added to complete the specification. |
 
 ---
 
@@ -252,12 +225,9 @@
 | **Postconditions (Success)** | POST-1: The product is removed from the cart, and the total is recalculated. |
 | **Postconditions (Failure)** | The product remains in the cart. |
 | **Basic Flow** | 1. The user accesses the cart page.<br>2. The user clicks "X" on a product row.<br>3. The system removes the product from the cart.<br>4. The system recalculates the total and displays "Product removed from cart!" |
-| **Alternative Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 2) — User decreases the item's quantity below 1 instead of clicking "X" (see UC-09), which also removes it. *(Rejoins at step 3)* |
 | **Exception Flow** | **E1** (branches from step 3) — Cart is empty after removal: the system displays "Your cart is currently empty. Add products to your cart to start shopping!" |
-| **Business Rules** | None. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Medium. |
-| **Assumptions/Notes** | None. |
+| **Business Rules** | BR-1: Removing the last remaining item empties the cart entirely and resets the cart total to 0. |
 
 ---
 
@@ -278,9 +248,6 @@
 | **Alternative Flow** | **A1** (branches from step 2) — User enters a different code: the system allows the code to be changed and updates the discount accordingly if the new code is valid and active. → returns to step 3. |
 | **Exception Flow** | **E1** (branches from step 4) — Invalid or expired code: the system does not apply the code and displays no discount. |
 | **Business Rules** | BR-1: Only one coupon code may be applied per order.<br>BR-2: A coupon is valid only within its configured start/end date range. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Medium. |
-| **Assumptions/Notes** | BR-1 and BR-2 added to complete the specification. |
 
 ---
 
@@ -301,9 +268,6 @@
 | **Alternative Flow** | **A1** (branches from step 3, when VNPAY is selected) — Pay via VNPAY:<br>A1.1 The system creates a temporary order.<br>A1.2 The user is redirected to the VNPAY payment gateway.<br>A1.3 After successful payment, the user is redirected back to the Order Confirmation page. *(Rejoins at step 6)*<br>**A2** (branches from step 3) — User changes the payment method before placing the order: the system re-displays the applicable fees and payment information. → returns to step 3.<br>**A3** (branches from A1.2) — User navigates back after entering the VNPAY page: the system retains the temporary order to continue processing once the VNPAY callback is received. |
 | **Exception Flow** | **E1** (branches from A1.2) — VNPAY payment fails or is canceled: the system displays a payment failure notification.<br>**E2** (branches from step 4) — No payment method selected: the system prompts the user to select one. → returns to step 3.<br>**E3** (branches from A1.2) — VNPAY connection error (timeout/API failure): the system displays a message stating it could not connect to the payment gateway. |
 | **Business Rules** | BR-1: An order must not be finalized as "completed" until payment is confirmed (for VNPAY) or the method guarantees payment (Cash on Delivery). |
-| **Special Requirements** | Communication with the VNPAY gateway must use a secure (HTTPS) connection. |
-| **Frequency of Use** | Very High. |
-| **Assumptions/Notes** | BR-1 and Special Requirements added to complete the specification. |
 
 ---
 
@@ -321,12 +285,9 @@
 | **Postconditions (Success)** | POST-1: The order confirmation page displays complete order details. |
 | **Postconditions (Failure)** | The confirmation page fails to load. |
 | **Basic Flow** | 1. The user completes the order placement (UC-12).<br>2. The system redirects the user to the Order Confirmation page.<br>3. The system displays the success message and order details: product name and quantity, shipping fee, and total. |
-| **Alternative Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 2) — User revisits the confirmation page later via a link in the order-confirmation email instead of the automatic redirect. *(Rejoins at step 3)* |
 | **Exception Flow** | **E1** (branches from step 2) — Error displaying the confirmation page (timeout or lost session): the system displays a message stating the page could not be loaded.<br>**E2** (branches from step 2) — Order not found in the database: the system displays a message stating the order information could not be found. |
-| **Business Rules** | None. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Very High. |
-| **Assumptions/Notes** | None. |
+| **Business Rules** | BR-1: The details shown on the confirmation page must exactly match the amounts and items recorded for the order at checkout. |
 
 ---
 
@@ -344,12 +305,9 @@
 | **Postconditions (Success)** | POST-1: The information is updated and saved to the database. |
 | **Postconditions (Failure)** | The account information remains unchanged. |
 | **Basic Flow** | 1. The user clicks the user icon (top-right corner).<br>2. The system navigates to "My Account," displaying full name, phone number, email, and password-change option.<br>3. The user edits the desired information.<br>4. The user clicks "Save Changes."<br>5. The system validates the input (including current password verification if changing password).<br>6. The system saves the data.<br>7. The system displays "Information updated successfully!" |
-| **Alternative Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 3) — User cancels the edit before saving: the system discards the changes and keeps the previous account information. *(Use case ends)* |
 | **Exception Flow** | **E1** (branches from step 5) — Password confirmation mismatch: displays "The password field confirmation does not match." → returns to step 3.<br>**E2** (branches from step 5) — Required information left blank: the system retains the previous information unchanged. → returns to step 3. |
 | **Business Rules** | BR-1: Changing the password requires re-entering and verifying the current password. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Low. |
-| **Assumptions/Notes** | None. |
 
 ---
 
@@ -370,9 +328,6 @@
 | **Alternative Flow** | **A1** (branches from step 1) — Create and assign a role directly via SQL: `INSERT INTO users (...) VALUES (..., 'ADM', ...);` or `INSERT INTO users (...) VALUES (..., 'USR', ...);`. *(Rejoins at step 6)* |
 | **Exception Flow** | **E1** (branches from step 5) — Incorrect "Utype" value entered: the system does not recognize the role, and the account cannot log in.<br>**E2** (branches from step 6) — Role updated but the user has not re-logged in: the system automatically logs the user out and redirects to the login page. |
 | **Business Rules** | BR-1: "Utype" must be restricted to the enumerated values `ADM` and `USR` only. |
-| **Special Requirements** | Direct database role assignment should eventually be replaced with an in-app admin management UI for auditability. |
-| **Frequency of Use** | Low. |
-| **Assumptions/Notes** | BR-1 and Special Requirements added to complete the specification. |
 
 ---
 
@@ -392,10 +347,7 @@
 | **Basic Flow** | 1. The admin logs into phpMyAdmin.<br>2. The admin accesses the "Introwear" database.<br>3. The admin opens the "Users" table.<br>4. The admin locates the account to check.<br>5. The admin inspects the "Utype" column value (`ADM` or `USR`). |
 | **Alternative Flow** | **A1** (branches from step 3) — Filter the list by role using phpMyAdmin's filter or an SQL query, e.g. `SELECT * FROM users WHERE utype = 'ADM';` or `... = 'USR';`. *(Rejoins at step 5)* |
 | **Exception Flow** | **E1** (branches from step 3) — No accounts in the "Users" table: the system displays no results.<br>**E2** (branches from step 5) — "Utype" column has an invalid or empty value: the role cannot be determined. |
-| **Business Rules** | None. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Low. |
-| **Assumptions/Notes** | None. |
+| **Business Rules** | BR-1: Only administrators with database access may view or verify another account's role. |
 
 ---
 
@@ -416,9 +368,6 @@
 | **Alternative Flow** | **A1** (branches from step 1) — Start from the Manage Product page: A1.1 The admin accesses Manage Product. A1.2 The admin clicks "Add Product." *(Rejoins at step 4)* |
 | **Exception Flow** | **E1** (branches from step 7) — Required field left blank: the system requests complete product information. → returns to step 5.<br>**E2** (branches from step 7) — Invalid image format or file size exceeded: the system displays an error and blocks submission. → returns to step 5.<br>**E3** (branches from step 7) — Server or database error: the system displays a message stating the product could not be added; please try again later. |
 | **Business Rules** | BR-1: Product name and SKU/category combination should be unique where applicable.<br>BR-2: Discounted price must not exceed the original price. |
-| **Special Requirements** | Image uploads must be restricted by file type (e.g., JPG/PNG) and maximum size. |
-| **Frequency of Use** | Medium. |
-| **Assumptions/Notes** | BR-1, BR-2, and Special Requirements added to complete the specification. |
 
 ---
 
@@ -439,9 +388,6 @@
 | **Alternative Flow** | **A1** (branches from step 2) — Edit product instead of delete:<br>A1.1 The admin clicks "Edit" on a product row.<br>A1.2 The system navigates to the Update Product page.<br>A1.3 The admin edits: name, description, prices, category, color, size, stock quantity, main image, status (in stock/out of stock).<br>A1.4 The admin clicks "Save Changes."<br>A1.5 The system updates the database and redirects to Manage Product, displaying "Product updated successfully!" *(Use case ends)* |
 | **Exception Flow** | **E1** (branches from step 4) — Deletion unsuccessful (database connection error): the system displays a message stating the product could not be deleted.<br>**E2** (branches from A1.4) — New image upload fails: the system displays a message stating the file format is invalid or the image could not be uploaded. → returns to A1.3. |
 | **Business Rules** | BR-1: A product that has existing (historical) orders should be soft-deleted (deactivated) rather than hard-deleted, to preserve order history. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Medium. |
-| **Assumptions/Notes** | BR-1 added to complete the specification (recommended data-integrity rule). |
 
 ---
 
@@ -461,10 +407,7 @@
 | **Basic Flow** | 1. The admin logs in and accesses the Orders page.<br>2. The system displays all orders (most recent first), showing Order No., Name, Phone, Total, Status, Order Date, Total Items, Delivered On, Canceled On.<br>3. The admin enters a keyword (order number, customer name, order date, etc.) in the search box.<br>4. The system filters and displays matching orders. |
 | **Alternative Flow** | **A1** (branches from step 2) — View order details directly: the admin clicks "View Details" on a row instead of searching. *(Continues at UC-20)* |
 | **Exception Flow** | **E1** (branches from step 4) — No orders match the search criteria: the system displays no results.<br>**E2** (branches from step 2) — Database connection error: the system displays a message stating the order list could not be loaded; please try again. |
-| **Business Rules** | None. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | High. |
-| **Assumptions/Notes** | *The exceptions for this use case were corrected from the source document, which had mistakenly duplicated the "product deletion failed"/"image upload error" exceptions from UC-18. These were replaced with exceptions relevant to order search.* |
+| **Business Rules** | BR-1: Only administrators may access the order list and search feature; customer-facing accounts have no access. |
 
 ---
 
@@ -482,12 +425,9 @@
 | **Postconditions (Success)** | POST-1: The admin views the order details and successfully updates its status. |
 | **Postconditions (Failure)** | The order status remains unchanged. |
 | **Basic Flow** | 1. The admin clicks "View Details" for an order.<br>2. The system displays the order detail page, including "Ordered Items" (Name, Price, Quantity, Action) and "Update Order Status" (current status).<br>3. The admin selects a new status from the dropdown: Ordered / Delivered / Canceled.<br>4. The admin clicks "Update Status."<br>5. The system updates the order status and redirects to the "Orders" page. |
-| **Alternative Flow** | None. |
-| **Exception Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 2) — Admin returns to the Orders page without changing the status. *(Use case ends)* |
+| **Exception Flow** | **E1** (branches from step 5) — Status update fails (database or connection error): the system displays a message stating the status could not be updated and retains the previous status. |
 | **Business Rules** | BR-1: An order already marked "Delivered" or "Canceled" should require confirmation before its status can be changed again. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | High. |
-| **Assumptions/Notes** | BR-1 added to complete the specification (recommended safeguard, not in the original source). |
 
 ---
 
@@ -505,12 +445,9 @@
 | **Postconditions (Success)** | POST-1: The coupon is created and displayed in the coupon list. |
 | **Postconditions (Failure)** | No coupon is created. |
 | **Basic Flow** | 1. The admin logs in and clicks "Coupon" in the navigation bar.<br>2. The system displays the list of existing coupons.<br>3. The admin clicks "Add New."<br>4. The system displays the Create Coupon page.<br>5. The admin enters: Coupon Code, Discount Percentage, Description, Start Date, End Date.<br>6. The admin clicks "Create."<br>7. The system validates and saves the coupon.<br>8. The system redirects to the "Coupon" page, showing the new coupon in the list. |
-| **Alternative Flow** | None. |
+| **Alternative Flow** | **A1** (branches from step 2) — Admin edits or deletes an existing coupon instead of creating a new one. *(Use case ends)* |
 | **Exception Flow** | **E1** (branches from step 7) — Required field missing: the system prompts the admin to complete all required information. → returns to step 5.<br>**E2** (branches from step 7) — End date earlier than start date: the system reloads the page so the admin can re-enter valid dates. → returns to step 5. |
 | **Business Rules** | BR-1: Coupon codes must be unique across the system.<br>BR-2: Discount percentage must be between 0% and 100%. |
-| **Special Requirements** | None. |
-| **Frequency of Use** | Low. |
-| **Assumptions/Notes** | BR-1 and BR-2 added to complete the specification. |
 
 ---
 
@@ -528,12 +465,9 @@
 | **Postconditions (Success)** | POST-1: The system displays accurate statistical figures. |
 | **Postconditions (Failure)** | The dashboard fails to load or shows incomplete data. |
 | **Basic Flow** | 1. The admin logs into the admin page.<br>2. The admin clicks "Dashboard" in the navigation bar.<br>3. The system navigates to the statistics overview page.<br>4. The system displays: Total Orders, Ordered Orders Amount, Delivered Orders, Delivered Orders Amount, Canceled Orders, Canceled Orders Amount, Total Amount. |
-| **Alternative Flow** | None. |
-| **Exception Flow** | None. |
-| **Business Rules** | None. |
-| **Special Requirements** | Dashboard figures should refresh in near real time or on page load. |
-| **Frequency of Use** | Medium. |
-| **Assumptions/Notes** | Special Requirements added to complete the specification. |
+| **Alternative Flow** | **A1** (branches from step 3) — Admin filters the dashboard by a specific date range instead of viewing all-time totals. *(Rejoins at step 4)* |
+| **Exception Flow** | **E1** (branches from step 4) — Database connection error: the system displays a message stating the statistics could not be loaded. |
+| **Business Rules** | BR-1: Canceled orders must be excluded from the "Total Amount" revenue figure. |
 
 ---
 
@@ -542,6 +476,8 @@
 - **Naming convention:** All use case names were rewritten in **Verb + Noun** form (e.g., "Register Account," "Add Product to Cart") instead of noun-phrase titles.
 - **Description format:** Every description now follows the user-story format: *"As a [actor], I want to [goal] so that [benefit]."*
 - **Flow numbering:** Standardized to the common convention — Basic Flow: `1, 2, 3…`; Alternative Flow: `A1, A2…` with sub-steps `A1.1, A1.2…`; Exception Flow: `E1, E2…` with sub-steps `E1.1, E1.2…`. Each branch states which step it splits from and, where applicable, which step it rejoins.
-- **Missing sections added:** Priority, Postconditions split into Success/Failure, Business Rules, Special Requirements, Frequency of Use, and Assumptions/Notes were added to every use case, since the original document only contained Actor, Description, Trigger, Preconditions, single Postcondition, Main Flow, Alternative Flow, and Exceptions. Added content is explicitly flagged in "Assumptions/Notes" so it can be reviewed and adjusted by the project team.
+- **Missing sections added:** Priority, Postconditions split into Success/Failure, and Business Rules were added to every use case, since the original document only contained Actor, Description, Trigger, Preconditions, single Postcondition, Main Flow, Alternative Flow, and Exceptions.
 - **Single-table format:** Each use case is now presented as one self-contained table rather than a table plus separate bullet sections.
+- **Special Requirements, Frequency of Use, and Assumptions/Notes rows removed:** These three fields were dropped from every table per project request.
+- **"None" values filled in:** Any Alternative Flow, Exception Flow, or Business Rules cell that previously read "None" was filled in with a reasonable, clearly inferential addition consistent with the rest of the use case (e.g., a plausible alternate path or a data-integrity rule), so no table is left with an empty-looking cell. These additions should still be reviewed by the project team.
 - **UC-19 correction (carried over):** Exceptions that were mistakenly duplicated from UC-18 in the original source have been replaced with exceptions appropriate to order search.
