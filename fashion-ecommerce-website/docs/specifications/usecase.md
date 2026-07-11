@@ -1,6 +1,4 @@
-# Use Case Specifications — Introwear E-Commerce System
-
-> Each use case follows a standard specification template: **ID, Name (Verb + Noun), Actor(s), Description (user story format), Priority, Trigger, Preconditions, Postconditions (Success/Failure), Basic Flow, Alternative Flow, Exception Flow, Business Rules.** Flows use the common numbering convention: Basic Flow = `1, 2, 3…`; each Alternative/Exception Flow is labeled `A1, A2…` / `E1, E2…` with sub-steps `A1.1, A1.2…` / `E1.1, E1.2…`, and each branch states where it splits from and rejoins the Basic Flow.
+# Use Case Specifications - INTROWEAR
 
 ## Table of Contents
 
@@ -468,16 +466,3 @@
 | **Alternative Flow** | **A1** (branches from step 3) — Admin filters the dashboard by a specific date range instead of viewing all-time totals. *(Rejoins at step 4)* |
 | **Exception Flow** | **E1** (branches from step 4) — Database connection error: the system displays a message stating the statistics could not be loaded. |
 | **Business Rules** | BR-1: Canceled orders must be excluded from the "Total Amount" revenue figure. |
-
----
-
-## Revision Notes
-
-- **Naming convention:** All use case names were rewritten in **Verb + Noun** form (e.g., "Register Account," "Add Product to Cart") instead of noun-phrase titles.
-- **Description format:** Every description now follows the user-story format: *"As a [actor], I want to [goal] so that [benefit]."*
-- **Flow numbering:** Standardized to the common convention — Basic Flow: `1, 2, 3…`; Alternative Flow: `A1, A2…` with sub-steps `A1.1, A1.2…`; Exception Flow: `E1, E2…` with sub-steps `E1.1, E1.2…`. Each branch states which step it splits from and, where applicable, which step it rejoins.
-- **Missing sections added:** Priority, Postconditions split into Success/Failure, and Business Rules were added to every use case, since the original document only contained Actor, Description, Trigger, Preconditions, single Postcondition, Main Flow, Alternative Flow, and Exceptions.
-- **Single-table format:** Each use case is now presented as one self-contained table rather than a table plus separate bullet sections.
-- **Special Requirements, Frequency of Use, and Assumptions/Notes rows removed:** These three fields were dropped from every table per project request.
-- **"None" values filled in:** Any Alternative Flow, Exception Flow, or Business Rules cell that previously read "None" was filled in with a reasonable, clearly inferential addition consistent with the rest of the use case (e.g., a plausible alternate path or a data-integrity rule), so no table is left with an empty-looking cell. These additions should still be reviewed by the project team.
-- **UC-19 correction (carried over):** Exceptions that were mistakenly duplicated from UC-18 in the original source have been replaced with exceptions appropriate to order search.
