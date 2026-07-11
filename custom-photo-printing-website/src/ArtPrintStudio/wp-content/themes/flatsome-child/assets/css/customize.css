@@ -1,0 +1,780 @@
+.sf-wrapper {
+  padding: 20px 0 60px;
+}
+
+.sf-top {
+  max-width: 1200px;
+  margin: 0 auto 10px;
+}
+
+.sf-back {
+  color: #1c1b1b;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sf-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  min-height: 520px;
+}
+
+/* LEFT */
+.sf-sidebar {
+  width: 220px;
+  border-right: 1px solid #eee;
+  padding: 40px 20px;
+}
+
+.sf-step {
+  margin-bottom: 20px;
+  color: #060606;
+  font-size: 15px;
+}
+
+.sf-step.active {
+  color: #2979ff;
+  font-weight: 600;
+}
+
+/* RIGHT */
+.sf-content {
+  flex: 1;
+  padding: 60px;
+  position: relative;
+}
+
+.sf-upload-card {
+  width: 620px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+}
+
+/* FOOTER BUTTON */
+.sf-footer {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+}
+
+.sf-customize-btn {
+  background: #fcfbfb;
+  color: #ff6a00;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: #ff6a00;
+}
+.sf-upload-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+/* MODAL */
+.sf-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.sf-modal.show {
+  display: flex;
+}
+
+.sf-modal-content {
+  position: relative;
+}
+
+.sf-modal-content img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.customize-card {
+  display: flex;
+  gap: 32px;
+  width: 760px;
+  margin: 0 auto 5px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  align-items: flex-start;
+}
+
+.customize-left {
+  flex: 0 0 auto;
+  width: fit-content; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.photo-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* FRAME SLIDER WRAPPER */
+.frame-select-wrapper {
+  position: relative;
+  width: 760px;      
+  margin: 20px auto 0;
+  display: flex;
+  align-items: center;
+}
+
+/* VIEWPORT */
+.frame-viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+/* TRACK */
+.frame-selector {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.35s ease;
+}
+
+/* ITEM – GIỮ NGUYÊN SIZE */
+.frame-option {
+  flex: 0 0 auto;       
+  width: 140px;          
+  height: 100px;
+
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.frame-option.active {
+  border-color: #3b82f6;
+}
+
+.frame-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NAV */
+.frame-nav {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #fff;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.frame-nav.hidden {
+  display: none;
+}
+
+/* MATERIAL SELECT */
+.material-select {
+    display: flex;
+  align-items: center;
+  margin: 20px 0px; 
+  gap: 16px;
+}
+
+.material-title {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #111;
+}
+
+.material-options {
+  display: flex;
+  gap: 16px;
+}
+
+/* ITEM – DEFAULT (KHÔNG MÀU) */
+.material-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+
+.material-option:hover {
+  border-color: #e5e7eb;
+}
+
+
+.material-option.active {
+  border-color: #2563eb;      /* blue border */
+  background-color: #eff6ff;  /* light blue background */
+}
+
+/* DOT */
+.material-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+/* DOT COLORS */
+.material-dot.canvas {
+  background: #d1a054;
+}
+
+.material-dot.acrylic {
+  background: #9ca3af;
+}
+
+.material-dot.plastic {
+  background: #111827;
+}
+
+/* NAME */
+.material-name {
+  font-size: 13px;
+  color: #111;
+  white-space: nowrap;
+}
+
+
+/* ẢNH USER */
+
+.frame-selector {
+  display: flex;
+  gap: 16px;
+ 
+}
+
+.frame-option {
+  width: 120px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.frame-option.active {
+  border-color: #3b82f6;
+}
+
+.frame-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frame-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.edit-tools p {
+  font-size: 14px;
+  color: #666;
+}
+
+.tool-list {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.tool-list button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.material-select {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.material-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+.customize-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.summary-box {
+  border: 1px solid #eee;
+  padding: 20px;
+  width: 260px;
+}
+
+.sf-add-cart {
+  width: 100%;
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+/* TOOL BUTTON ICON */
+.tool-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px;
+}
+
+.tool-btn img {
+  width: 20px;
+  height: 20px;
+  color: #060606;
+  opacity: 0.85;
+}
+.tool-sliders {
+  margin-top: 24px;
+  max-width: 240px;
+}
+
+.slider-group {
+  display: none;
+  margin-bottom: 16px;
+}
+
+.slider-group label {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.slider-group input[type="range"] {
+  width: 200px;
+}
+.tool-list .tool-btn img {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px;
+  max-height: 20px;
+  object-fit: contain;
+}
+
+.frame-wrapper {
+  position: relative;
+  width: 320px;
+  height: 400px;
+}
+.photo-frame {
+  width: 320px;
+  height: 400px;
+  position: relative;
+}
+
+/* KHUNG */
+.frame-box {
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* ẢNH USER */
+#userPhoto {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+
+  width: auto;
+  height: auto;
+  max-width: calc(100% - 48px);
+  max-height: calc(100% - 48px);
+
+  object-fit: contain;
+  object-position: center;
+
+  z-index: 1;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* SAVE CREATION BUTTON */
+.sf-save {
+  background: #ffffff;                 /* nền trắng */
+  color: #ff6a00;                      /* chữ cam */
+  border: 1.5px solid #ff6a00;         /* viền cam */
+  border-radius: 6px;                  /* bo góc nhẹ */
+
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.sf-save:hover {
+  background: #ff6a00;                 /* nền cam */
+  color: #ffffff;                      /* chữ trắng */
+}
+
+/* ACTIVE (khi click) */
+.sf-save:active {
+  transform: scale(0.97);
+}
+
+/* DISABLED (nếu cần sau này) */
+.sf-save:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.ratio-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.ratio-modal.show {
+  display: flex;
+}
+
+.ratio-box {
+  background: #fff;
+  padding: 24px;
+  width: 360px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.ratio-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.ratio-actions button {
+  flex: 1;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.ratio-close {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
+}
+
+/* KHUNG – GIỮ NGUYÊN */
+.photo-frame {
+  width: 320px;
+  height: 400px;
+  position: relative;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.frame-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* DAO CẮT */
+.photo-window {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  overflow: hidden;   
+}
+
+/* ẢNH */
+#userPhoto {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+/* =========================
+   SIZE SELECT – RESET THEME
+========================= */
+
+/* Xóa pseudo-element (dấu > từ theme) */
+.size-select *::before,
+.size-select *::after {
+  content: none !important;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+.size-select {
+  margin-top: 30px;
+}
+
+
+/* =========================
+   SIZE OPTIONS LAYOUT
+========================= */
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* =========================
+   SIZE BUTTON (ỔN ĐỊNH)
+========================= */
+.size-option {
+  appearance: none;
+  background-color: #fff;
+  color: #333;
+
+  box-sizing: border-box;
+  min-width: 90px;
+  padding: 8px 14px;
+
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  
+
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+
+  
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.size-title{
+  font-size: 16px;
+  font-weight: 600;
+  margin: 12px 0px;
+  color: #111;
+}
+
+.size-option:hover {
+  border-color: #ccc;
+}
+
+
+button.size-option.active {
+  background-color: #f1f1f1;
+  border-color: #000;
+
+}
+
+/* =========================
+   HIDDEN STATE (JS CONTROL)
+========================= */
+.size-option[style*="display:none"] {
+  display: none !important;
+}
+
+/*STICKER*/
+.sticker-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  background: rgba(0,0,0,.4);
+  z-index: 9999;
+}
+
+.sticker-panel {
+  width: 600px;
+  background: #fff;
+  margin: 8% auto;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.sticker-item {
+  width:60%;
+  cursor: pointer;
+}
+
+/* sticker gắn lên ảnh */
+.sticker-on-frame {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  cursor: move;
+  z-index: 20;
+}
+
+/* ===== STICKER WRAPPER ===== */
+.sticker-wrapper {
+  position: absolute;
+  cursor: move;
+  z-index: 30;
+}
+
+.sticker-wrapper img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* NÚT XOÁ */
+.delete-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  background: #ff4d4f;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+/* GÓC RESIZE */
+.resize-handle {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  width: 12px;
+  height: 12px;
+  background: #ff4d4f;
+  cursor: se-resize;
+}
+/* ===== STICKER ===== */
+.sticker-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  cursor: move;
+  z-index: 10;
+}
+
+.sticker-wrapper img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* Nút xoá */
+.sticker-remove {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4d4f;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+/* Góc resize */
+.sticker-resize {
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: se-resize;
+}
+
+#btnDoneSticker {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0px 20px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+
+}
+
+#btnDoneSticker:hover{
+  background-color: #ff6a00;
+  color: black;
+}
+#btnSticker {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0px 20px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+
+}
+
+#btnSticker p{
+
+  margin: auto;
+}
+#btnSticker:hover{
+  background-color: #ff6a00;
+  color: black;
+}

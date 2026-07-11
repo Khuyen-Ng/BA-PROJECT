@@ -1,0 +1,209 @@
+/* ===== RESET NHẸ ===== */
+.order-tracking-page * {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== PAGE ===== */
+.order-tracking-page {
+  background: #f5f6f8;
+  padding: 30px;
+}
+
+/* ===== HEADER ===== */
+.order-header-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.order-header-box strong {
+  font-size: 15px;
+}
+
+.order-header-box .sub {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.order-status {
+  text-align: center;
+  font-size: 14px;
+}
+
+.order-status strong {
+  color: #111;
+}
+
+.arrival {
+  text-align: right;
+  font-size: 14px;
+}
+
+.arrival .date {
+  display: inline-block;
+  background: #3b82f6;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* ===== TRACKING BOX ===== */
+.tracking-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.tracking-box h4 {
+  margin: 0 0 16px;
+  font-size: 15px;
+}
+
+/* ===== PROGRESS ===== */
+.progress {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* LINE */
+.progress::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8%;
+  right: 8%;
+  height: 4px;
+  background: #e5e7eb;
+  z-index: 0;
+}
+
+.step {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  color: #9ca3af;
+  z-index: 1;
+}
+
+/* DOT */
+.step::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: #d1d5db;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+/* ACTIVE */
+.step.active {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.step.active::before {
+  background: #16a34a;
+}
+
+/* ===== ORDER ITEMS ===== */
+.order-items {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.order-items h4 {
+  margin: 0 0 16px;
+  font-size: 15px;
+}
+
+/* ITEM ROW */
+.order-item {
+  display: grid;
+  grid-template-columns: 70px 2fr 1fr 1fr 2fr;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+}
+
+.order-item:first-child {
+  border-top: none;
+}
+
+/* IMAGE */
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+/* INFO */
+.item-info strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.item-info .links {
+  font-size: 12px;
+  color: #06b6d4;
+  cursor: pointer;
+}
+
+/* QTY & PRICE */
+.qty,
+.price {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ACTIONS */
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  border: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+/* RECEIVE */
+.btn-green {
+  background: #22c55e;
+  color: #fff;
+}
+
+/* BUY AGAIN */
+.btn-orange {
+  background: #fb923c;
+  color: #fff;
+}
+
+/* HOVER */
+.actions button:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,18 @@
+# uploads & cache
+uploads/
+cache/
+upgrade/
+
+# dependency
+node_modules/
+vendor/
+
+# OS & env
+.DS_Store
+.env
+*.log
+
+# KHÔNG ??y theme cha & plugin t?i ngoài
+themes/flatsome/
+plugins/woocommerce/
+plugins/contact-form-7/

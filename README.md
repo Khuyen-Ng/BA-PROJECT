@@ -64,7 +64,7 @@ I'm looking for an internship where I can continue learning, gain hands-on exper
 * Modeled CRM, Sales, Purchasing, and Inventory workflows using BPMN.
 * Configured Odoo modules and supported business process testing.
 
-### Custom Photo Printing Website
+### Custom Photo Printing Website - ArtPrintStudio
 
 * Gathered and analyzed business requirements.
 * Created Use Case Diagrams and detailed Use Case Specifications.
@@ -72,7 +72,7 @@ I'm looking for an internship where I can continue learning, gain hands-on exper
 * Built Sequence Diagrams and Class Diagrams.
 * Participated in developing image upload, product customization, preview, and ordering features.
 
-### Fashion E-commerce Website
+### Fashion E-commerce Website - INTROWEAR
 
 * Analyzed system requirements.
 * Designed Use Case Diagrams and ERD.
