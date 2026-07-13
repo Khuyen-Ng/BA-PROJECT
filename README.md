@@ -91,7 +91,7 @@ I'm looking for an internship where I can continue learning, gain hands-on exper
 
 Email: [yykhuyenn27@gmail.com](mailto:yykhuyenn27@gmail.com)
 
-LinkedIn: *Add your LinkedIn profile*
+LinkedIn: [ linkedin.com/in/khuyen-ng-yk27](https://www.linkedin.com/in/khuyen-ng-yk27/)
 
 Thank you for visiting my GitHub profile.
 
