@@ -1,0 +1,53 @@
+# Phân tích Kinh doanh - Dự án CRM IELTS Fighter
+
+## 1. Thực trạng trước khi triển khai CRM
+
+Trước khi có hệ thống CRM, quy trình tuyển sinh và chăm sóc học viên tại IELTS Fighter chủ yếu dựa vào các công cụ thủ công và rời rạc:
+
+- **Quản lý Lead phân tán**: Thông tin Lead được lưu tại nhiều nơi (Excel, Google Sheet, form website, Zalo, Facebook, Email…).
+- **Theo dõi thủ công**: Lịch gọi, hẹn test đầu vào, follow-up đều được ghi chép riêng lẻ, dễ bỏ sót.
+- **Quy trình tư vấn không thống nhất**: Mỗi nhân viên tư vấn theo cách riêng, dẫn đến trải nghiệm khách hàng không đồng đều.
+- **Chăm sóc học viên rời rạc**: Lịch học, điểm danh, lịch bù, phản hồi học viên được quản lý bởi nhiều bộ phận khác nhau (CSKH, Giáo vụ, Đào tạo).
+- **Marketing thiếu đo lường**: Khó đánh giá hiệu quả các kênh quảng cáo (CPL, Conversion Rate).
+- **Báo cáo chậm và thủ công**: Ban quản lý khó có báo cáo thời gian thực về hiệu suất tuyển sinh và tình hình học viên.
+
+## 2. Các vấn đề chính
+
+- Thất thoát Lead do không theo dõi kịp thời và thiếu trách nhiệm rõ ràng.
+- Tỷ lệ chuyển đổi Lead thấp do follow-up không hệ thống.
+- Chất lượng dịch vụ không đồng đều giữa các tư vấn viên.
+- Khó xây dựng lộ trình học cá nhân hóa vì thiếu dữ liệu lịch sử học viên.
+- Không đánh giá được hiệu suất nhân viên một cách chính xác.
+- Chi phí Marketing bị lãng phí do không đo lường được kênh hiệu quả.
+
+## 3. Mục tiêu triển khai CRM
+
+### Mục tiêu chung
+Xây dựng hệ thống CRM tập trung, chuẩn hóa quy trình tuyển sinh và nâng cao chất lượng chăm sóc học viên tại IELTS Fighter.
+
+### Mục tiêu cụ thể
+- Tập trung hóa dữ liệu Lead và học viên.
+- Chuẩn hóa quy trình từ Marketing → Tư vấn → Nhập học → CSKH.
+- Tự động hóa hoạt động follow-up và nhắc nhở.
+- Cung cấp báo cáo thời gian thực hỗ trợ quản lý.
+- Tích hợp Lead Form từ website và các kênh quảng cáo.
+
+## 4. Yêu cầu chức năng chính
+
+- **Quản lý Lead & Pipeline**: Theo dõi tiến độ từ Lead → Test → Tư vấn → Đăng ký.
+- **Quản lý Khóa học & Lớp học**: Danh mục khóa học, quản lý lớp, lịch học.
+- **Quản lý Học phí**: Tạo hóa đơn, theo dõi thanh toán, công nợ.
+- **Quản lý Tiến độ & CSKH**: Hồ sơ học viên, lịch học, phản hồi, chăm sóc định kỳ.
+- **Báo cáo**: Hiệu suất Sales, chất lượng Lead, doanh thu, tỷ lệ bỏ lớp.
+- **Tích hợp & Automation**: Lead Form website, API, tự động gửi email/SMS.
+
+---
+
+**File này** đã được tối ưu để nhà tuyển dụng dễ đọc.  
+
+Bạn muốn tôi chỉnh thêm (thêm phần Kết quả, Thách thức, hay rút gọn) hay tạo thêm file khác (ví dụ: `odoo_implementation.md`)? 
+Hãy cho biết để tôi hỗ trợ tiếp!
+
+## Giải pháp Đề xuất
+
+Giải pháp đề xuất là triển khai hệ thống **CRM trên Odoo** nhằm số hóa quy trình tuyển sinh và tập trung hóa dữ liệu khách hàng. Pipeline CRM được tùy chỉnh phù hợp với quy trình thực tế của trung tâm, giúp nhân viên quản lý Lead hiệu quả hơn, đồng thời tăng tính minh bạch và sự phối hợp giữa các bộ phận.

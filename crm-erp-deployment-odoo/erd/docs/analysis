@@ -1,0 +1,41 @@
+# Phân tích Kinh doanh - Dự án ERP 123CORP
+
+## 1. Bối cảnh Doanh nghiệp
+
+123CORP là công ty chuyên phân phối thiết bị tin học, thiết bị mạng, NAS, máy in và phụ kiện công nghệ tại thị trường Việt Nam. Công ty hoạt động theo mô hình B2B (dự án) và B2C, với đặc thù:
+
+- Quản lý hàng tồn kho lớn với nhiều sản phẩm có **serial number**.
+- Bán hàng chủ yếu theo dự án (báo giá nhiều vòng, thương lượng giá).
+- Nhiều phiên bản cấu hình sản phẩm dễ gây nhầm lẫn.
+- Tồn kho biến động nhanh theo nhu cầu dự án.
+
+## 2. Các vấn đề chính
+
+- Dữ liệu khách hàng và sản phẩm rời rạc, dễ mất mát.
+- Quy trình Order-to-Cash (báo giá → chốt đơn → giao hàng) thiếu tính nhất quán.
+- Khó kiểm soát tồn kho theo serial number → rủi ro sai sót khi xuất hàng và bảo hành.
+- Thời gian xử lý báo giá và đơn hàng kéo dài do làm thủ công.
+- Ban quản lý thiếu báo cáo thời gian thực để ra quyết định.
+- Khó mở rộng quy mô kinh doanh khi chưa có hệ thống chuẩn.
+
+## 3. Mục tiêu triển khai ERP
+
+### Mục tiêu chung
+Xây dựng hệ thống ERP tích hợp giúp chuẩn hóa quy trình kinh doanh, nâng cao hiệu quả quản lý tồn kho và tăng khả năng cạnh tranh của 123CORP.
+
+### Mục tiêu cụ thể
+- Tập trung hóa dữ liệu khách hàng, sản phẩm và tồn kho.
+- Chuẩn hóa quy trình bán hàng (từ báo giá đến chốt đơn và thanh toán).
+- Quản lý tồn kho theo serial number chính xác.
+- Tự động hóa việc tạo báo giá, đơn hàng và gửi email.
+- Cung cấp báo cáo thời gian thực về doanh thu, tồn kho và công nợ.
+- Hỗ trợ phân quyền rõ ràng theo vai trò nhân viên.
+
+## 5. Phạm vi & Chức năng chính
+
+- **CRM & Sales**: Quản lý Lead, Opportunity, Báo giá, Đơn bán hàng.
+- **Inventory**: Quản lý kho, nhập - xuất kho theo serial number.
+- **Purchase**: Quản lý mua hàng và nhà cung cấp.
+- **Accounting**: Hóa đơn, thanh toán, công nợ (cơ bản).
+- **HRM**: Quản lý nhân sự cơ bản (tùy chọn).
+- Tích hợp email tự động và template tài liệu có thương hiệu.
