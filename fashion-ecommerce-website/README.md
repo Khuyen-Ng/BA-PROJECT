@@ -126,7 +126,121 @@ src/
 └── Laravel Source Code
 ```
 ---
+# Hướng dẫn cài đặt và chạy dự án
 
+## Yêu cầu môi trường
+
+Trước khi chạy dự án, cần cài đặt:
+
+- PHP >= 8.2
+- Composer
+- Node.js & npm
+- MySQL
+- Git
+
+---
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/introwear.git
+cd introwear
+```
+
+---
+
+## 2. Cài đặt thư viện
+
+```bash
+composer install
+```
+
+```bash
+npm install
+```
+
+---
+
+## 3. Tạo file môi trường
+
+Linux / macOS
+
+```bash
+cp .env.example .env
+```
+
+Windows
+
+```bash
+copy .env.example .env
+```
+
+---
+
+## 4. Sinh Application Key
+
+```bash
+php artisan key:generate
+```
+
+---
+
+## 5. Cấu hình cơ sở dữ liệu
+
+Chỉnh sửa file `.env`
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=introwear
+DB_USERNAME=root
+DB_PASSWORD=your_password
+```
+
+---
+
+## 6. Khởi tạo cơ sở dữ liệu
+
+```bash
+php artisan migrate
+```
+
+Nếu dự án có dữ liệu mẫu:
+
+```bash
+php artisan migrate --seed
+```
+
+---
+
+## 7. Build Frontend
+
+```bash
+npm run dev
+```
+
+Hoặc
+
+```bash
+npm run build
+```
+
+---
+
+## 8. Chạy dự án
+
+```bash
+php artisan serve
+```
+
+Ứng dụng sẽ chạy tại:
+
+```
+http://127.0.0.1:8000
+```
+
+---
 # Kết quả đạt được
 
 Thông qua dự án, nhóm đã xây dựng thành công một hệ thống thương mại điện tử đáp ứng đầy đủ quy trình mua sắm trực tuyến từ tìm kiếm sản phẩm đến quản lý đơn hàng. Dự án cũng giúp nhóm nâng cao kỹ năng phân tích yêu cầu, mô hình hóa hệ thống, thiết kế cơ sở dữ liệu và phát triển ứng dụng Web bằng Laravel.

@@ -1,5 +1,3 @@
-# Odoo Internship
-
 Repository này chứa **hai dự án Odoo** mà em thực hiện trong quá trình thực tập / đồ án chuyên ngành. 
 
 ## Giới thiệu
@@ -20,7 +18,7 @@ Tôi đã áp dụng hệ thống **Odoo** để giải quyết bài toán thự
 
 ---
 
-## 🛠 Công nghệ sử dụng
+## Công nghệ sử dụng
 
 - **Odoo** (phiên bản 17/18)
 - Python, PostgreSQL

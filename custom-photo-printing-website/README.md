@@ -137,6 +137,82 @@ src/
 ```
 ---
 
+# Hướng dẫn cài đặt và chạy dự án
+
+## Yêu cầu môi trường
+
+Trước khi chạy dự án, cần cài đặt:
+
+- PHP >= 8.x
+- MySQL
+- WordPress
+- WooCommerce
+- Composer (nếu sử dụng plugin tùy chỉnh)
+- Git
+- Web Server (Apache hoặc Nginx)
+
+---
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/art-print-studio.git
+```
+
+---
+
+## 2. Thiết lập WordPress
+
+- Cài đặt WordPress trên máy cục bộ.
+- Tạo cơ sở dữ liệu MySQL.
+- Cấu hình file `wp-config.php` với thông tin kết nối cơ sở dữ liệu.
+
+---
+
+## 3. Cài đặt WooCommerce
+
+- Đăng nhập trang quản trị WordPress.
+- Cài đặt và kích hoạt plugin WooCommerce.
+- Hoàn thành các bước thiết lập ban đầu.
+
+---
+
+## 4. Import cơ sở dữ liệu
+
+Nếu repository cung cấp file SQL:
+
+- Tạo database mới.
+- Import file `.sql` bằng phpMyAdmin hoặc MySQL Workbench.
+
+---
+
+## 5. Cài đặt giao diện và plugin
+
+- Sao chép theme vào thư mục:
+
+```text
+wp-content/themes/
+```
+
+- Sao chép các plugin tùy chỉnh vào:
+
+```text
+wp-content/plugins/
+```
+
+- Kích hoạt theme và plugin từ trang quản trị WordPress.
+
+---
+
+## 6. Truy cập website
+
+Ví dụ:
+
+```
+http://localhost/art-print-studio
+```
+
+---
 ## Liên hệ
 
 Nếu có câu hỏi về dự án, vui lòng liên hệ qua GitHub hoặc LinkedIn.
