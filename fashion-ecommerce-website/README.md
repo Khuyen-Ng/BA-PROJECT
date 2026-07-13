@@ -82,8 +82,6 @@ The following knowledge and techniques were applied during the project:
 
 * Business Analysis
 * Requirements Gathering and Analysis
-* Functional Requirements (FR)
-* Non-functional Requirements (NFR)
 * Use Case Diagram
 * Use Case Specification
 * Entity Relationship Diagram (ERD)
