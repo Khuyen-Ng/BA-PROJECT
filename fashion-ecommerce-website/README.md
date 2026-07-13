@@ -78,7 +78,7 @@ Framework **Laravel** được sử dụng để xây dựng các chức năng n
 
 # Kiến thức áp dụng
 
-Trong quá trình thực hiện dự án, nhóm đã áp dụng các kiến thức về:
+Trong quá trình thực hiện dự án, những kiến thức sau được áp dụng:
 
 - Business Analysis.
 - Thu thập và phân tích yêu cầu.
@@ -108,7 +108,6 @@ Trong quá trình thực hiện dự án, nhóm đã áp dụng các kiến th�
 
 ## System Development
 
-- Thiết kế cơ sở dữ liệu MySQL.
 - Phát triển chức năng tạo đơn hàng.
 - Phát triển chức năng xác nhận đơn hàng.
 - Xây dựng module quản lý đơn hàng.

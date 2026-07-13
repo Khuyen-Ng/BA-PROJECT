@@ -92,7 +92,7 @@ Theo kiến trúc:
 
 ## Những kiến thức áp dụng
 
-Trong quá trình thực hiện dự án, nhóm đã áp dụng các kiến thức về:
+Trong quá trình thực hiện dự án, các kiến thức sau được áp dụng:
 
 - Business Analysis
 - Requirement Gathering
@@ -135,15 +135,6 @@ docs/
 src/
 └── WordPress + WooCommerce Source Code
 ```
-
----
-
-## Team
-
-Đây là đồ án học phần được thực hiện bởi nhóm sinh viên Trường Đại học Công nghệ Thông tin – Đại học Quốc gia TP.HCM (UIT – VNU-HCM).
-
-Phần **Vai trò của tôi** thể hiện các hạng mục mà tôi trực tiếp tham gia trong dự án.
-
 ---
 
 ## Liên hệ
