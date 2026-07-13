@@ -28,16 +28,17 @@ Dự án Phân tích Kinh doanh và Triển khai CRM sử dụng **Odoo Communit
 
 ## Công nghệ sử dụng
 
-- Odoo Community
-- Python
-- PostgreSQL
-- Git
-- Draw.io
+- **Odoo**
+- **Python** (Odoo Framework)
+- **PostgreSQL**
+- **Camunda** (BPMN)
+- **Google Sheets + Apps Script** (Tích hợp)
 
 ## Cấu trúc Repository
 
 ```text
-docs/
-├── analysis.md
-├── odoo_implementation.md
-└── BPMN.png
+├── docs/
+│   ├── analysis.md                 # Phân tích yêu cầu & vấn đề
+│   ├── odoo_implementation.md      # Báo cáo triển khai chi tiết
+│   └── bpmn/                       # Các file BPMN
+└── README.md
