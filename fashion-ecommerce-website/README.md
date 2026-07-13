@@ -119,8 +119,8 @@ The following knowledge and techniques were applied during the project:
 
 ```text
 docs/
-├── diagrams/
-├── specifications/
+├── diagrams/                        # UML diagrams
+├── specifications/                  # Use Case, Database
 
 src/
 └── Laravel Source Code
