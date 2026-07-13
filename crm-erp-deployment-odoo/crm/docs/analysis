@@ -1,53 +1,53 @@
-# Phân tích Kinh doanh - Dự án CRM IELTS Fighter
+# Business Analysis - IELTS Fighter CRM Project
 
-## 1. Thực trạng trước khi triển khai CRM
+## 1. Situation Before CRM Deployment
 
-Trước khi có hệ thống CRM, quy trình tuyển sinh và chăm sóc học viên tại IELTS Fighter chủ yếu dựa vào các công cụ thủ công và rời rạc:
+Before the CRM system, IELTS Fighter's enrollment and student care processes mainly relied on manual and fragmented tools:
 
-- **Quản lý Lead phân tán**: Thông tin Lead được lưu tại nhiều nơi (Excel, Google Sheet, form website, Zalo, Facebook, Email…).
-- **Theo dõi thủ công**: Lịch gọi, hẹn test đầu vào, follow-up đều được ghi chép riêng lẻ, dễ bỏ sót.
-- **Quy trình tư vấn không thống nhất**: Mỗi nhân viên tư vấn theo cách riêng, dẫn đến trải nghiệm khách hàng không đồng đều.
-- **Chăm sóc học viên rời rạc**: Lịch học, điểm danh, lịch bù, phản hồi học viên được quản lý bởi nhiều bộ phận khác nhau (CSKH, Giáo vụ, Đào tạo).
-- **Marketing thiếu đo lường**: Khó đánh giá hiệu quả các kênh quảng cáo (CPL, Conversion Rate).
-- **Báo cáo chậm và thủ công**: Ban quản lý khó có báo cáo thời gian thực về hiệu suất tuyển sinh và tình hình học viên.
+- **Scattered lead management**: Lead information was stored in many places (Excel, Google Sheets, website forms, Zalo, Facebook, Email…).
+- **Manual tracking**: Call schedules, entrance test appointments, and follow-ups were recorded separately and easy to miss.
+- **Inconsistent consultation process**: Each advisor followed their own method, causing uneven customer experience.
+- **Fragmented student care**: Class schedules, attendance, make-up lessons, and student feedback were managed by different departments (Customer Service, Academic Affairs, Training).
+- **Marketing lacked measurement**: It was difficult to assess the effectiveness of advertising channels (CPL, Conversion Rate).
+- **Slow and manual reporting**: Management lacked real-time reports on recruitment performance and student status.
 
-## 2. Các vấn đề chính
+## 2. Main Issues
 
-- Thất thoát Lead do không theo dõi kịp thời và thiếu trách nhiệm rõ ràng.
-- Tỷ lệ chuyển đổi Lead thấp do follow-up không hệ thống.
-- Chất lượng dịch vụ không đồng đều giữa các tư vấn viên.
-- Khó xây dựng lộ trình học cá nhân hóa vì thiếu dữ liệu lịch sử học viên.
-- Không đánh giá được hiệu suất nhân viên một cách chính xác.
-- Chi phí Marketing bị lãng phí do không đo lường được kênh hiệu quả.
+- Lead loss due to untimely follow-up and unclear responsibility.
+- Low lead conversion rate due to unstructured follow-up.
+- Uneven service quality among advisors.
+- Difficulty creating personalized learning plans because of missing student history.
+- Inability to accurately evaluate employee performance.
+- Marketing costs wasted due to inability to measure channel effectiveness.
 
-## 3. Mục tiêu triển khai CRM
+## 3. CRM Deployment Objectives
 
-### Mục tiêu chung
-Xây dựng hệ thống CRM tập trung, chuẩn hóa quy trình tuyển sinh và nâng cao chất lượng chăm sóc học viên tại IELTS Fighter.
+### General objective
+Build a centralized CRM system, standardize the enrollment process, and improve student care quality at IELTS Fighter.
 
-### Mục tiêu cụ thể
-- Tập trung hóa dữ liệu Lead và học viên.
-- Chuẩn hóa quy trình từ Marketing → Tư vấn → Nhập học → CSKH.
-- Tự động hóa hoạt động follow-up và nhắc nhở.
-- Cung cấp báo cáo thời gian thực hỗ trợ quản lý.
-- Tích hợp Lead Form từ website và các kênh quảng cáo.
+### Specific objectives
+- Centralize lead and student data.
+- Standardize the process from Marketing → Consultation → Enrollment → Customer Service.
+- Automate follow-up and reminders.
+- Provide real-time reports to support management.
+- Integrate website lead forms and advertising channels.
 
-## 4. Yêu cầu chức năng chính
+## 4. Main Functional Requirements
 
-- **Quản lý Lead & Pipeline**: Theo dõi tiến độ từ Lead → Test → Tư vấn → Đăng ký.
-- **Quản lý Khóa học & Lớp học**: Danh mục khóa học, quản lý lớp, lịch học.
-- **Quản lý Học phí**: Tạo hóa đơn, theo dõi thanh toán, công nợ.
-- **Quản lý Tiến độ & CSKH**: Hồ sơ học viên, lịch học, phản hồi, chăm sóc định kỳ.
-- **Báo cáo**: Hiệu suất Sales, chất lượng Lead, doanh thu, tỷ lệ bỏ lớp.
-- **Tích hợp & Automation**: Lead Form website, API, tự động gửi email/SMS.
+- **Lead & Pipeline Management**: Track progress from Lead → Test → Consultation → Registration.
+- **Course & Class Management**: Course catalog, class management, schedule management.
+- **Tuition Management**: Create invoices, track payments, manage receivables.
+- **Progress & Customer Care Management**: Student profiles, schedules, feedback, periodic care.
+- **Reporting**: Sales performance, lead quality, revenue, dropout rate.
+- **Integration & Automation**: Website lead forms, API, automatic email/SMS sending.
 
 ---
 
-**File này** đã được tối ưu để nhà tuyển dụng dễ đọc.  
+**This file** has been optimized for easy reading by employers.
 
-Bạn muốn tôi chỉnh thêm (thêm phần Kết quả, Thách thức, hay rút gọn) hay tạo thêm file khác (ví dụ: `odoo_implementation.md`)? 
-Hãy cho biết để tôi hỗ trợ tiếp!
+Would you like me to add more details (Results, Challenges, or a summary) or create another file (for example: `odoo_implementation.md`)?
+Please let me know so I can assist further!
 
-## Giải pháp Đề xuất
+## Proposed Solution
 
-Giải pháp đề xuất là triển khai hệ thống **CRM trên Odoo** nhằm số hóa quy trình tuyển sinh và tập trung hóa dữ liệu khách hàng. Pipeline CRM được tùy chỉnh phù hợp với quy trình thực tế của trung tâm, giúp nhân viên quản lý Lead hiệu quả hơn, đồng thời tăng tính minh bạch và sự phối hợp giữa các bộ phận.
+The recommended solution is to implement a **CRM system on Odoo** to digitize the enrollment process and centralize customer data. The CRM pipeline is customized to match the center's actual process, helping staff manage leads more effectively while increasing transparency and collaboration across departments.

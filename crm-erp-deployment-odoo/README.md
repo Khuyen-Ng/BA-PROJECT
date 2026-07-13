@@ -1,42 +1,42 @@
-Repository này chứa **hai dự án Odoo** mà em thực hiện trong quá trình thực tập / đồ án chuyên ngành. 
+This repository contains two Odoo projects completed as part of a specialized course project.
 
-## Giới thiệu
+## Introduction
 
-Tôi đã áp dụng hệ thống **Odoo** để giải quyết bài toán thực tế tại hai doanh nghiệp:
+I applied the **Odoo** system to solve real business problems at two companies:
 
-### 1. Project 1: ERP cho Công ty TNHH 123CORP
-**Ứng dụng hệ thống ERP trong quản lý phân phối thiết bị công nghệ**
+### 1. Project 1: ERP for 123CORP Co., Ltd.
+**Applying an ERP system for technology equipment distribution management**
 
-- **Mô tả**: Xây dựng hệ thống ERP toàn diện hỗ trợ quy trình bán hàng, quản lý tồn kho theo serial number, mua hàng và báo cáo.
-- **Module chính**: CRM, Sales, Purchase, Inventory, Accounting, HRM.
+- **Description**: Built a comprehensive ERP system supporting sales, inventory management by serial number, purchasing, and reporting.
+- **Main modules**: CRM, Sales, Purchase, Inventory, Accounting, HRM.
 
-### 2. Project 2: CRM cho Trung tâm Anh ngữ IELTS Fighter
-**Ứng dụng hệ thống CRM trong quản lý tuyển sinh và chăm sóc học viên**
+### 2. Project 2: CRM for IELTS Fighter Language Center
+**Applying a CRM system for student recruitment and customer care management**
 
-- **Mô tả**: Thiết kế và triển khai CRM hỗ trợ quy trình tuyển sinh, quản lý lead, pipeline bán hàng và chăm sóc học viên.
-- **Module chính**: CRM, Sales, Website Integration, Automation.
+- **Description**: Designed and implemented a CRM system to support recruitment, lead management, sales pipeline, and student care.
+- **Main modules**: CRM, Sales, Website Integration, Automation.
 
 ---
 
-## Công nghệ sử dụng
+## Technologies Used
 
-- **Odoo** (phiên bản 17/18)
+- **Odoo** (version 17/18)
 - Python, PostgreSQL
 - BPMN
 - API Integration & Automation
 
 ---
 
-## Cấu trúc Repository
-- `erp/` — Đồ án ERP cho 123CORP
-- `crm` — Đồ án CRM cho IELTS Fighter
-- `docs/` — Báo cáo chi tiết và tài liệu
+## Repository Structure
+- `erp/` — ERP project for 123CORP
+- `crm` — CRM project for IELTS Fighter
+- `docs/` — Detailed reports and documentation
 
 ---
 
-## Kết quả đạt được
+## Achievements
 
-- Chuẩn hóa quy trình kinh doanh
-- Tăng khả năng theo dõi và quản lý dữ liệu tập trung
-- Tự động hóa một số hoạt động thủ công
-- Xây dựng hệ thống có thể mở rộng thực tế
+- Standardized business processes
+- Improved centralized data tracking and management
+- Automated some manual activities
+- Built a scalable real system

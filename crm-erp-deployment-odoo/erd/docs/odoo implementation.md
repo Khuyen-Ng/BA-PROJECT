@@ -1,90 +1,88 @@
-# Triển khai Odoo ERP cho Công ty TNHH 123CORP
+# Odoo ERP Implementation for 123CORP Co., Ltd.
 
-## 1. Cấu hình Hệ thống Cơ bản
+## 1. Basic System Configuration
 
-Đã thực hiện các công việc cấu hình nền tảng trên Odoo:
+Completed the platform configuration in Odoo:
 
-- Thiết lập thông tin công ty, logo, địa chỉ và thông tin thuế.
-- Cấu hình đơn vị tiền tệ chính: **VND**.
-- Cấu hình đa ngôn ngữ (**Tiếng Việt** và **English**).
-- Thiết lập người dùng, phòng ban và phân quyền chi tiết theo vai trò (Admin, Salesperson, Purchase Manager, Inventory Manager, HR…).
-- Cấu hình **SMTP Gmail** để gửi email tự động (báo giá, hóa đơn, thông báo).
-- Tùy chỉnh layout tài liệu (báo giá, hóa đơn, Purchase Order) theo thương hiệu 123CORP.
-- Thiết lập kho hàng và chính sách theo dõi **Serial Number**.
+- Set up company information, logo, address, and tax details.
+- Configured the main currency: **VND**.
+- Configured multiple languages (**Vietnamese** and **English**).
+- Set up users, departments, and detailed role-based permissions (Admin, Salesperson, Purchase Manager, Inventory Manager, HR…).
+- Configured **SMTP Gmail** for automated email sending (quotations, invoices, notifications).
+- Customized document layouts (quotations, invoices, Purchase Orders) to match the 123CORP brand.
+- Set up warehouses and serial number tracking policies.
 
-## 2. Triển khai Các Quy trình Chính
+## 2. Core Process Deployment
 
-### 2.1. Quy trình Bán hàng (Sales - Order to Cash)
-Hiện thực đầy đủ quy trình theo thiết kế BPMN trong tài liệu:
+### 2.1. Sales Process (Sales - Order to Cash)
+Implemented the full process according to the BPMN design in the documentation:
 
-- Tiếp nhận Lead từ website/form → Convert to Opportunity.
-- Lập & gửi báo giá (Quotation) nhiều vòng thương lượng.
-- Chốt đơn → Sales Order → Tạo hóa đơn.
-- Theo dõi serial number trên đơn hàng.
+- Receive leads from website/forms → convert to Opportunity.
+- Create and send quotations with multiple negotiation rounds.
+- Confirm orders → Sales Order → Create invoices.
+- Track serial numbers on orders.
 
-### 2.2. Quy trình Mua hàng (Purchase - Procure to Pay)
-- Tạo RFQ → Nhận báo giá nhà cung cấp → Phê duyệt Purchase Order.
-- Nhận hàng tại kho (kiểm tra serial) → Xác nhận hóa đơn → Thanh toán.
+### 2.2. Purchase Process (Purchase - Procure to Pay)
+- Create RFQs → receive supplier quotes → approve Purchase Orders.
+- Receive goods in warehouse (check serials) → confirm invoices → make payments.
 
-### 2.3. Quy trình Quản lý Kho (Inventory)
-- Nhập/xuất kho theo serial number.
-- Kiểm kê, điều chuyển kho, cảnh báo tồn kho thấp.
-- Tích hợp chặt chẽ với Sales và Purchase.
+### 2.3. Inventory Management Process
+- Inbound/outbound warehouse movements with serial number tracking.
+- Stocktaking, internal transfers, low stock alerts.
+- Tight integration with Sales and Purchase.
 
-### 2.4. Quy trình Nhân sự (HRM - Cơ bản)
-- Quản lý nhân viên, phòng ban.
-- Hợp đồng lao động, nghỉ phép (theo yêu cầu dự án).
+### 2.4. HRM Process (Basic)
+- Manage employees and departments.
+- Manage labor contracts and leave requests (per project needs).
 
-## 3. Xây dựng Module API Chuẩn hóa (`123corp.api`)
+## 3. Built Standardized API Module (`123corp.api`)
 
-**Đây là một trong những phần quan trọng nhất của dự án**, nhằm “kéo ERP ra ngoài” phục vụ tích hợp hệ thống bên ngoài.
+**This is one of the most important parts of the project**, designed to expose ERP capabilities for external system integration.
 
-### Mục tiêu module
-- Xây dựng **API RESTful chuẩn hóa** (theo kiểu shop/best practices).
-- Cho phép các hệ thống bên ngoài (Website, Mobile App, Google Sheets, Power BI, phần mềm khác…) dễ dàng truy vấn và tương tác dữ liệu thời gian thực.
-- Đảm bảo bảo mật, dễ mở rộng và tuân thủ cấu trúc Odoo.
+### Module objectives
+- Build a standardized **RESTful API** (following shop/best practices).
+- Allow external systems (Website, Mobile App, Google Sheets, Power BI, other software…) to query and interact with real-time data.
+- Ensure security, scalability, and Odoo structure compliance.
 
-### Các tính năng chính đã thực hiện
-- Xác thực qua **API Key**.
-- Cung cấp các endpoint chuẩn hóa cho toàn bộ quy trình kinh doanh.
-- Hỗ trợ đầy đủ các nghiệp vụ cốt lõi của 123CORP:
-  - Quản lý Sản phẩm (có lọc theo serial, tồn kho).
-  - Khách hàng & Lead.
-  - Báo giá (Quotation) và Đơn bán hàng.
-  - Đơn mua hàng (Purchase Order).
-  - Kiểm tra tồn kho & Serial Number.
-  - Nhân sự cơ bản.
+### Key features implemented
+- Authentication via **API Key**.
+- Standardized endpoints for the full business process.
+- Supported core 123CORP operations:
+  - Product management (with filters by serial, stock availability).
+  - Customer & Lead management.
+  - Quotations and Sales Orders.
+  - Purchase Orders.
+  - Inventory and Serial Number checks.
+  - Basic HR management.
 
-## 4. Quản lý Dữ liệu
+## 4. Data Management
 
-- Nhập liệu danh mục sản phẩm, khách hàng, nhà cung cấp.
-- Import/Export Excel/CSV.
-- Làm sạch dữ liệu và thiết lập reordering rules.
+- Imported product catalogs, customers, and suppliers.
+- Imported/Exported data via Excel/CSV.
+- Cleaned data and set up reordering rules.
 
-## 5. Báo cáo & Phân tích
+## 5. Reporting & Analysis
 
-- Báo cáo Pipeline bán hàng, Purchase Analysis, Inventory Valuation.
-- Dashboard theo dõi tồn kho, doanh số, tỷ lệ chuyển đổi Lead → Won.
-- Báo cáo phễu bán hàng (Sales Funnel).
+- Sales pipeline reports, purchase analysis, inventory valuation.
+- Dashboards for stock, revenue, and lead-to-won conversion rates.
+- Sales funnel reporting.
 
-## 6. Tự động hóa (Automation)
+## 6. Automation
 
-- Automation Rules: Follow-up khách hàng, cảnh báo tồn kho thấp.
-- Scheduled Actions: Báo cáo định kỳ.
-- Email & Notification tự động.
+- Automation Rules: customer follow-up, low stock alerts.
+- Scheduled Actions: periodic reports.
+- Automated email and notifications.
 
+## 7. System Customization
 
-## 7. Tùy chỉnh Hệ thống
+- Customized views, fields, and workflows.
+- Added custom product fields (serial, configuration).
+- Adjusted approval workflows for quotations and purchase orders.
 
-- Tùy chỉnh views, fields, workflow.
-- Thêm trường tùy chỉnh cho sản phẩm (serial, cấu hình).
-- Điều chỉnh approval workflow cho báo giá & đơn mua.
+## 8. Achievements
 
-## 8. Kết quả Đạt được
-
-- Hệ thống ERP quản lý tập trung toàn bộ quy trình: Bán hàng, Mua hàng, Kho, Nhân sự.
-- Chuẩn hóa hoạt động, giảm sai sót thủ công đáng kể.
-- Kiểm soát chặt chẽ tồn kho và serial number.
-- **Module API** mạnh mẽ giúp dễ dàng mở rộng tích hợp với website và các hệ thống bên ngoài.
-- Nâng cao hiệu quả phối hợp giữa các bộ phận.
-- Nền tảng sẵn sàng scale lên cho giai đoạn tiếp theo (Accounting đầy đủ, HRM nâng cao, Mobile App…).
+- A centralized ERP system managing Sales, Purchase, Inventory, and HR.
+- Standardized operations and significantly reduced manual errors.
+- Tight control of inventory and serial number tracking.
+- A powerful **API module** that enables easy integration with website and external systems.
+- Improved collaboration between departments.

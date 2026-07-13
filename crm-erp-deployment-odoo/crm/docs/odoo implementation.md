@@ -1,76 +1,76 @@
-# Triển khai Odoo (Odoo Implementation)
+# Odoo Implementation
 
-## 1. Cấu hình Hệ thống Cơ bản
+## 1. Basic System Configuration
 
-Đã thực hiện các công việc cấu hình nền tảng trên Odoo:
+Completed the platform configuration in Odoo:
 
-- Thiết lập thông tin công ty, logo và địa chỉ.
-- Cấu hình đa ngôn ngữ (Tiếng Việt và English).
-- Thiết lập người dùng, phòng ban và phân quyền chi tiết theo vai trò.
-- Cấu hình SMTP để gửi email tự động (báo giá, thông báo, nhắc lịch).
-- Thiết lập CRM Pipeline và các Stage theo quy trình tuyển sinh.
-- Cấu hình Lost Reasons, Activities và các trường tùy chỉnh.
+- Set up company information, logo, and address.
+- Configured multiple languages (Vietnamese and English).
+- Set up users, departments, and detailed role-based permissions.
+- Configured SMTP for automated email sending (quotations, notifications, reminders).
+- Set up CRM Pipeline and stages according to the enrollment process.
+- Configured Lost Reasons, Activities, and custom fields.
 
-## 2. Triển khai Quy trình CRM
+## 2. CRM Process Deployment
 
-Hiện thực quy trình tuyển sinh trên Odoo theo thiết kế BPMN:
+Implemented the enrollment process in Odoo according to the BPMN design:
 
-| Stage                    | Mô tả |
-|--------------------------|------|
-| **New**                  | Tiếp nhận Lead mới từ các kênh. |
-| **First Contact**        | Liên hệ ban đầu, ghi nhận nhu cầu. |
-| **Schedule Test**        | Lên lịch kiểm tra đầu vào. |
-| **Tested**               | Học viên đã hoàn thành bài test. |
-| **Counselling**          | Tư vấn khóa học phù hợp. |
-| **Paid**                 | Hoàn tất thanh toán học phí. |
-| **Won**                  | Hoàn tất quy trình, chuyển thành học viên chính thức. |
+| Stage                    | Description |
+|--------------------------|-------------|
+| **New**                  | Receive new leads from channels. |
+| **First Contact**        | Initial contact to record requirements. |
+| **Schedule Test**        | Schedule the entrance test. |
+| **Tested**               | The student has completed the test. |
+| **Counselling**          | Provide suitable course consultation. |
+| **Paid**                 | Complete tuition payment. |
+| **Won**                  | Complete the process and convert to an official student. |
 
-## 3. Tạo Module Mới - Admission Funnel Report
+## 3. New Module Development - Admission Funnel Report
 
-**Đây là một trong những phần tùy chỉnh quan trọng nhất của dự án.**
+**This is one of the most important custom parts of the project.**
 
-- Tạo module mới mang tên **`admission.funnel.report`**.
-- Mục đích: Xây dựng báo cáo phễu tuyển sinh (Admission Funnel) để phân tích hiệu quả quy trình từ Lead → Test → Đăng ký → Thanh toán.
-- Model chính: `admission.funnel.report`
-- Các chức năng chính đã thực hiện:
-  - Thiết kế bộ lọc linh hoạt (thời gian, kênh marketing, nhân viên, hình thức test, khóa học, trạng thái thanh toán…).
-  - Tính toán tự động số lượng và **tỷ lệ chuyển đổi** ở từng giai đoạn funnel.
-  - Hỗ trợ 3 loại view: List View, Form View và Graph View (biểu đồ cột).
-  - Logic tính toán phức tạp sử dụng `domain` động và hàm `_compute_funnel_values()`.
+- Created a new module named **`admission.funnel.report`**.
+- Purpose: Build an admission funnel report to analyze the process from Lead → Test → Registration → Payment.
+- Main model: `admission.funnel.report`
+- Key functions implemented:
+  - Designed flexible filters (time, marketing channel, staff, test type, course, payment status…).
+  - Automatically calculated counts and **conversion rates** at each funnel stage.
+  - Supported three view types: List View, Form View, and Graph View (bar chart).
+  - Implemented complex calculation logic using dynamic `domain` and the `_compute_funnel_values()` method.
 
-Module này giúp Ban quản lý dễ dàng đánh giá hiệu quả quy trình tuyển sinh và ra quyết định dựa trên dữ liệu thực tế.
+This module helps management evaluate enrollment efficiency and make decisions based on real data.
 
-## 4. Quản lý Dữ liệu
+## 4. Data Management
 
-- Nhập liệu danh mục khóa học, Lead và khách hàng mẫu.
-- Sử dụng Import/Export Excel/CSV.
-- Áp dụng Filter, Group By và Saved Search.
+- Entered course catalog, sample leads, and customer records.
+- Used Import/Export via Excel/CSV.
+- Applied filters, Group By, and Saved Searches.
 
-## 5. Báo cáo & Phân tích
+## 5. Reporting & Analysis
 
-- Sử dụng các báo cáo có sẵn: Pipeline Analysis, Lead Analysis, Pivot, Graph, Dashboard.
-- Triển khai module **Admission Funnel Report** tùy chỉnh.
+- Used built-in reports: Pipeline Analysis, Lead Analysis, Pivot, Graph, Dashboard.
+- Implemented the custom **Admission Funnel Report** module.
 
-## 6. Tự động hóa
+## 6. Automation
 
 - Automation Rules
 - Scheduled Activities
-- Email & SMS Notification
+- Email & SMS Notifications
 
-## 7. API & Tích hợp
+## 7. API & Integration
 
-- Tìm hiểu và thử nghiệm XML-RPC API của Odoo.
-- Khảo sát tích hợp Lead Form từ website qua API.
+- Researched and tested Odoo XML-RPC API.
+- Explored integrating website lead forms via API.
 
-## 8. Tùy chỉnh Hệ thống
+## 8. System Customization
 
-- Tùy chỉnh Pipeline, Stage và các trường dữ liệu.
-- Điều chỉnh form view và quyền truy cập.
+- Customized Pipeline, stages, and data fields.
+- Adjusted form views and access rights.
 
-## 9. Kết quả Đạt được
+## 9. Achievements
 
-- Hệ thống CRM hoạt động ổn định và quản lý tập trung dữ liệu.
-- Theo dõi rõ ràng toàn bộ quy trình tuyển sinh.
-- Có công cụ báo cáo mạnh mẽ (đặc biệt là Admission Funnel Report).
-- Nâng cao hiệu quả phối hợp giữa các bộ phận.
-- Nền tảng sẵn sàng mở rộng cho doanh nghiệp.
+- A stable CRM system with centralized data management.
+- Clear tracking of the entire enrollment process.
+- Powerful reporting tools (especially the Admission Funnel Report).
+- Improved coordination across departments.
+- A platform ready for business expansion.

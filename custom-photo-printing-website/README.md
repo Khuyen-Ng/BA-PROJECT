@@ -1,131 +1,141 @@
-# ART PRINT STUDIO – Hệ thống đặt in ảnh theo yêu cầu
+# ART PRINT STUDIO – Custom Photo Printing E-commerce Website
 
-Website thương mại điện tử cho phép khách hàng đặt in ảnh theo yêu cầu, tùy chỉnh thông số sản phẩm và xem trước kết quả trước khi đặt hàng.
-
----
-
-## Giới thiệu
-
-Nhiều cửa hàng in ảnh hiện nay vẫn tiếp nhận đơn hàng thông qua Facebook hoặc Zalo. Khách hàng phải gửi ảnh qua tin nhắn, trao đổi nhiều lần về kích thước, loại khung, chất liệu và xác nhận thiết kế trước khi cửa hàng tiến hành in.
-
-Quy trình này gây ra nhiều vấn đề:
-
-- Tốn nhiều thời gian trao đổi giữa khách hàng và cửa hàng.
-- Dễ xảy ra nhầm lẫn về kích thước hoặc cấu hình sản phẩm.
-- Khách hàng không biết sản phẩm sau khi in sẽ trông như thế nào.
-- Chủ shop khó quản lý đơn hàng và theo dõi trạng thái xử lý.
-
-Dự án **ART PRINT STUDIO** được xây dựng nhằm số hóa toàn bộ quy trình đặt in ảnh, giúp khách hàng có thể tự cấu hình sản phẩm, xem trước kết quả và đặt hàng trực tuyến, đồng thời hỗ trợ cửa hàng quản lý đơn hàng hiệu quả hơn.
+A web-based e-commerce application that allows customers to order custom photo printing products, customize product options, and preview the final result before placing an order.
 
 ---
 
-## Mục tiêu của dự án
+# Introduction
 
-- Xây dựng quy trình đặt in ảnh trực tuyến hoàn chỉnh.
-- Cho phép khách hàng xem trước sản phẩm trước khi đặt hàng.
-- Chuẩn hóa dữ liệu về kích thước, khung và chất liệu in.
-- Giảm sai sót trong quá trình tiếp nhận đơn hàng.
-- Hỗ trợ quản lý trạng thái xử lý đơn hàng từ khi tiếp nhận đến khi hoàn thành.
+Many photo printing stores still receive orders through Facebook or Zalo. Customers have to send photos via chat, discuss product size, frame type, printing material, and confirm the design before the store starts printing.
 
----
+This process causes several problems:
 
-## Các tính năng chính
+* It takes a lot of time for customers and store owners to communicate.
+* Product specifications such as size or configuration can easily be misunderstood.
+* Customers cannot preview how the final printed product will look.
+* Store owners have difficulty managing orders and tracking their processing status.
 
-### Khách hàng
-
-- Đăng ký, đăng nhập.
-- Xem danh mục sản phẩm.
-- Upload ảnh cần in.
-- Chọn:
-  - Kích thước
-  - Loại khung
-  - Chất liệu
-  - Số lượng
-- Xem trước (Live Preview) sản phẩm.
-- Thêm vào giỏ hàng.
-- Đặt hàng.
-- Theo dõi trạng thái đơn hàng.
-- Xem lịch sử mua hàng.
-
-### Quản trị viên
-
-- Quản lý sản phẩm.
-- Quản lý kích thước, khung và chất liệu.
-- Quản lý khách hàng.
-- Quản lý đơn hàng.
-- Cập nhật trạng thái đơn hàng.
-- Quản lý nội dung website.
+**ART PRINT STUDIO** was developed to digitize the entire photo printing process. It allows customers to customize products, preview the final result, and place orders online while helping store owners manage orders more efficiently.
 
 ---
 
-## Kiến trúc hệ thống
+# Project Objectives
 
-Hệ thống được xây dựng trên nền tảng:
-
-- WordPress
-- WooCommerce
-- MySQL
-
-Theo kiến trúc:
-
-- Monolithic Architecture
-- Layered Architecture
-  - Presentation Layer
-  - Business Layer
-  - Data Layer
+* Build a complete online photo printing workflow.
+* Allow customers to preview products before placing an order.
+* Standardize product options such as size, frame type, and printing material.
+* Reduce errors during the order process.
+* Support order tracking from submission to completion.
 
 ---
 
-## Công nghệ sử dụng
+# Main Features
 
-- WordPress
-- WooCommerce
-- PHP
-- MySQL
-- JavaScript
-- HTML/CSS
-- Figma
-- Draw.io
-- Git & GitHub
+## Customer
 
----
+* Register and log in.
+* Browse product categories.
+* Upload photos for printing.
+* Select:
 
-## Những kiến thức áp dụng
+  * Product size
+  * Frame type
+  * Printing material
+  * Quantity
+* Preview the product (Live Preview).
+* Add products to the shopping cart.
+* Place orders.
+* Track order status.
+* View order history.
 
-Trong quá trình thực hiện dự án, các kiến thức sau được áp dụng:
+## Administrator
 
-- Business Analysis
-- Requirement Gathering
-- Functional & Non-functional Requirements
-- Use Case Modeling
-- Use Case Specification
-- UML
-- BPMN
-- Database Design (ERD)
-- UI/UX Mockup
-- Website thương mại điện tử
-- WordPress & WooCommerce Customization
+* Manage products.
+* Manage sizes, frame types, and printing materials.
+* Manage customers.
+* Manage orders.
+* Update order status.
+* Manage website content.
 
 ---
 
-## Vai trò của tôi
+# System Architecture
+
+The system is built using:
+
+* WordPress
+* WooCommerce
+* MySQL
+
+It follows:
+
+* Monolithic Architecture
+* Layered Architecture
+
+  * Presentation Layer
+  * Business Logic Layer
+  * Data Layer
+
+---
+
+# Technologies
+
+* WordPress
+* WooCommerce
+* PHP
+* MySQL
+* JavaScript
+* HTML
+* CSS
+* Figma
+* Draw.io
+* Git & GitHub
+
+---
+
+# Knowledge Applied
+
+The following knowledge and techniques were applied during the project:
+
+* Business Analysis
+* Requirements Gathering
+* Functional Requirements (FR)
+* Non-functional Requirements (NFR)
+* Use Case Modeling
+* Use Case Specification
+* UML
+* BPMN
+* Database Design (ERD)
+* UI/UX Design
+* E-commerce Website Development
+* WordPress & WooCommerce Customization
+
+---
+
+# My Role
 
 **Business Analyst & Developer**
 
-Các công việc tôi thực hiện:
+## Business Analysis
 
-- Phân tích yêu cầu nghiệp vụ.
-- Xây dựng Functional Requirements và Non-functional Requirements.
-- Thiết kế Use Case Diagram.
-- Đặc tả Use Case.
-- Thiết kế Sequence Diagram.
-- Thiết kế cơ sở dữ liệu.
-- Thiết kế giao diện bằng Figma.
-- Hỗ trợ phát triển chức năng upload ảnh và quy trình đặt in.
+* Gathered and analyzed business requirements.
+* Defined Functional Requirements and Non-functional Requirements.
+* Designed the Use Case Diagram.
+* Wrote Use Case Specifications.
+* Designed the Sequence Diagram.
+* Designed the Entity Relationship Diagram (ERD).
+* Created UI designs using Figma.
+
+## System Development
+
+* Assisted in developing the image upload feature.
+* Customized the photo printing workflow.
+* Supported the implementation of the product preview feature.
+* Assisted in developing the order processing workflow.
 
 ---
 
-## Cấu trúc repository
+# Repository Structure
 
 ```text
 docs/
@@ -135,84 +145,86 @@ docs/
 src/
 └── WordPress + WooCommerce Source Code
 ```
----
-
-# Hướng dẫn cài đặt và chạy dự án
-
-## Yêu cầu môi trường
-
-Trước khi chạy dự án, cần cài đặt:
-
-- PHP >= 8.x
-- MySQL
-- WordPress
-- WooCommerce
-- Composer (nếu sử dụng plugin tùy chỉnh)
-- Git
-- Web Server (Apache hoặc Nginx)
 
 ---
 
-## 1. Clone Repository
+# Installation & Setup
+
+## Prerequisites
+
+Before running the project, make sure the following software is installed:
+
+* PHP >= 8.x
+* MySQL
+* WordPress
+* WooCommerce
+* Composer (if custom plugins are used)
+* Git
+* A web server (Apache or Nginx)
+
+---
+
+## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/art-print-studio.git
+git clone https://github.com/your-username/ArtPrintStudio.git
 ```
 
 ---
 
-## 2. Thiết lập WordPress
+## 2. Set Up WordPress
 
-- Cài đặt WordPress trên máy cục bộ.
-- Tạo cơ sở dữ liệu MySQL.
-- Cấu hình file `wp-config.php` với thông tin kết nối cơ sở dữ liệu.
-
----
-
-## 3. Cài đặt WooCommerce
-
-- Đăng nhập trang quản trị WordPress.
-- Cài đặt và kích hoạt plugin WooCommerce.
-- Hoàn thành các bước thiết lập ban đầu.
+* Install WordPress on your local machine.
+* Create a MySQL database.
+* Configure the database connection in the `wp-config.php` file.
 
 ---
 
-## 4. Import cơ sở dữ liệu
+## 3. Install WooCommerce
 
-Nếu repository cung cấp file SQL:
-
-- Tạo database mới.
-- Import file `.sql` bằng phpMyAdmin hoặc MySQL Workbench.
+* Log in to the WordPress Admin Dashboard.
+* Install and activate the WooCommerce plugin.
+* Complete the initial WooCommerce setup.
 
 ---
 
-## 5. Cài đặt giao diện và plugin
+## 4. Import the Database
 
-- Sao chép theme vào thư mục:
+If the repository includes a SQL file:
+
+* Create a new database.
+* Import the `.sql` file using phpMyAdmin or MySQL Workbench.
+
+---
+
+## 5. Install the Theme and Plugins
+
+Copy the theme to:
 
 ```text
 wp-content/themes/
 ```
 
-- Sao chép các plugin tùy chỉnh vào:
+Copy any custom plugins to:
 
 ```text
 wp-content/plugins/
 ```
 
-- Kích hoạt theme và plugin từ trang quản trị WordPress.
+Then activate the theme and plugins from the WordPress Admin Dashboard.
 
 ---
 
-## 6. Truy cập website
+## 6. Access the Website
 
-Ví dụ:
+Example:
 
-```
+```text
 http://localhost/art-print-studio
 ```
 
 ---
-## Liên hệ
 
-Nếu có câu hỏi về dự án, vui lòng liên hệ qua GitHub hoặc LinkedIn.
+# Contact
+
+If you have any questions about this project, feel free to connect with me through GitHub or LinkedIn.

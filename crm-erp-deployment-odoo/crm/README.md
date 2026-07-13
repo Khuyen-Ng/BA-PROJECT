@@ -1,44 +1,44 @@
-# Hệ thống CRM với Odoo
+# CRM System with Odoo
 
-Dự án Phân tích Kinh doanh và Triển khai CRM sử dụng **Odoo Community** cho case study Trung tâm Anh ngữ IELTS Fighter. Dự án tập trung vào việc phân tích yêu cầu kinh doanh, thiết kế quy trình CRM và cấu hình Odoo để hỗ trợ quy trình tuyển sinh học viên cùng quản lý quan hệ khách hàng.
+This Business Analysis and CRM Deployment project uses **Odoo Community** for the IELTS Fighter language center case study. The project focuses on analyzing business requirements, designing CRM processes, and configuring Odoo to support student recruitment and customer relationship management.
 
-## Tổng quan Dự án
+## Project Overview
 
-- **Nền tảng:** Odoo Community
-- **Cơ sở dữ liệu:** PostgreSQL
-- **Môi trường:** Localhost (Source Code)
+- **Platform:** Odoo Community
+- **Database:** PostgreSQL
+- **Environment:** Localhost (Source Code)
 
-## Các Chức năng Chính
+## Key Features
 
-- Quản lý Lead & Opportunity
-- Quản lý Khách hàng
-- Lên lịch bài kiểm tra đầu vào
-- Tư vấn khóa học
-- Quản lý Hoạt động (Activity)
-- Bảng điều khiển & Báo cáo (Dashboard & Reporting)
+- Lead & Opportunity Management
+- Customer Management
+- Entrance Test Scheduling
+- Course Consultation
+- Activity Management
+- Dashboard & Reporting
 
-## Trách nhiệm của tôi
+## My Responsibilities
 
-- Phân tích yêu cầu kinh doanh và xác định các vấn đề hiện tại.
-- Thiết kế quy trình kinh doanh CRM bằng BPMN.
-- Cấu hình workflow CRM và Pipeline trong Odoo.
-- Thiết lập người dùng, vai trò và quyền truy cập.
-- Cấu hình các automation.
-- Lập trình module mới.
+- Analyze business requirements and identify current issues.
+- Design CRM business processes using BPMN.
+- Configure CRM workflow and Pipeline in Odoo.
+- Set up users, roles, and access rights.
+- Configure automation.
+- Develop custom modules.
 
-## Công nghệ sử dụng
+## Technologies Used
 
 - **Odoo**
 - **Python** (Odoo Framework)
 - **PostgreSQL**
 - **Camunda** (BPMN)
-- **Google Sheets + Apps Script** (Tích hợp)
+- **Google Sheets + Apps Script** (Integration)
 
-## Cấu trúc Repository
+## Repository Structure
 
 ```text
 ├── docs/
-│   ├── analysis.md                 # Phân tích yêu cầu & vấn đề
-│   ├── odoo_implementation.md      # Báo cáo triển khai chi tiết
-│   └── bpmn/                       # Các file BPMN
+│   ├── analysis.md                 # Business analysis & issues
+│   ├── odoo_implementation.md      # Detailed implementation report
+│   └── bpmn/                       # BPMN files
 └── README.md

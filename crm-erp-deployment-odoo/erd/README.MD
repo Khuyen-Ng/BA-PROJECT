@@ -1,48 +1,48 @@
-# Triển khai Hệ thống ERP Odoo cho Công ty TNHH 123CORP
+# ERP Odoo System Implementation for 123CORP Co., Ltd.
 
-Dự án **Triển khai Hệ thống ERP** sử dụng **Odoo Community** nhằm chuẩn hóa quy trình kinh doanh cho Công ty TNHH 123CORP – doanh nghiệp chuyên phân phối thiết bị công nghệ, tin học và văn phòng.
+This ERP implementation project uses **Odoo Community** to standardize business processes for 123CORP Co., Ltd. — a company specializing in distribution of technology, computing, and office equipment.
 
-Dự án tập trung vào việc giải quyết các vấn đề quản lý khách hàng rời rạc, quy trình bán hàng chưa chuẩn hóa, kiểm soát tồn kho và serial number, đồng thời xây dựng nền tảng tích hợp qua **API**.
+The project focuses on solving scattered customer management, non-standard sales processes, inventory and serial number control, while building an integration platform through **API**.
 
-## Tổng quan Dự án
+## Project Overview
 
-- **Tên doanh nghiệp**: Công ty TNHH 123CORP (Thương hiệu: ThietBiVanPhong123.com)
-- **Lĩnh vực**: Phân phối thiết bị tin học, mạng, lưu trữ NAS, văn phòng
-- **Nền tảng**: Odoo Community
-- **Cơ sở dữ liệu**: PostgreSQL
-- **Môi trường**: Localhost / Development
-- **Mục tiêu chính**: Chuẩn hóa quy trình Bán hàng, Mua hàng, Kho hàng và hỗ trợ tích hợp hệ thống bên ngoài
+- **Company name**: 123CORP Co., Ltd. (Brand: ThietBiVanPhong123.com)
+- **Industry**: Distribution of computing equipment, networking devices, NAS, printers, and technology accessories
+- **Platform**: Odoo Community
+- **Database**: PostgreSQL
+- **Environment**: Localhost / Development
+- **Main objective**: Standardize Sales, Purchase, and Inventory processes, and support integration with external systems
 
-## Các Chức năng Chính Đã Triển Khai
+## Main Functions Implemented
 
-### 1. Quy trình Bán hàng (Sales - Order to Cash)
-### 2. Quy trình Mua hàng (Purchase - Procure to Pay)
-### 3. Quản lý Kho & Tồn kho (Inventory)
-### 4. Quản lý Khách hàng & CRM
-### 6. Quản lý nhân sự
+### 1. Sales Process (Sales - Order to Cash)
+### 2. Purchase Process (Purchase - Procure to Pay)
+### 3. Inventory & Stock Management
+### 4. Customer & CRM Management
+### 5. Human Resources Management
 
-## Trách nhiệm của tôi
+## My Responsibilities
 
-- Phân tích yêu cầu kinh doanh và vấn đề hiện tại của công ty.
-- Thiết kế các quy trình chính (Bán hàng, Mua hàng, Kho) bằng BPMN.
-- Cài đặt, cấu hình và tùy chỉnh Odoo.
-- Xây dựng **Module API** chuẩn hóa để tích hợp hệ thống bên ngoài.
-- Thiết lập automation.
+- Analyze the business requirements and the company’s current issues.
+- Design the main processes (Sales, Purchase, Inventory) using BPMN.
+- Install, configure, and customize Odoo.
+- Build a standard **API module** for external system integration.
+- Set up automation.
 
-## Công nghệ & Công cụ sử dụng
+## Technologies & Tools Used
 
 - **Odoo**
 - **Python** (Odoo Framework)
 - **PostgreSQL**
 - **Camunda** (BPMN)
-- **Postman** (Test API)
-- **Google Sheets + Apps Script** (Tích hợp)
+- **Postman** (API Testing)
+- **Google Sheets + Apps Script** (Integration)
 
-## Cấu trúc Repository
+## Repository Structure
 
 ```text
 ├── docs/
-│   ├── analysis.md                 # Phân tích yêu cầu & vấn đề
-│   ├── odoo_implementation.md      # Báo cáo triển khai chi tiết
-│   └── bpmn/                       # Các file BPMN
+│   ├── analysis.md                 # Business analysis & issues
+│   ├── odoo_implementation.md      # Detailed implementation report
+│   └── bpmn/                       # BPMN files
 └── README.md

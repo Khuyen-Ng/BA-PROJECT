@@ -1,121 +1,121 @@
-# INTROWEAR – Website Thương mại Điện tử Thời trang
+# INTROWEAR – Fashion E-commerce Website
 
-Website thương mại điện tử được phát triển nhằm xây dựng một nền tảng mua sắm thời trang trực tuyến, giúp khách hàng dễ dàng tìm kiếm, lựa chọn và đặt mua sản phẩm, đồng thời hỗ trợ cửa hàng quản lý hoạt động kinh doanh trên một hệ thống tập trung.
-
----
-
-## Giới thiệu
-
-Sự phát triển của các sàn thương mại điện tử đã giúp các cửa hàng thời trang tiếp cận nhiều khách hàng hơn, nhưng cũng khiến họ phụ thuộc vào chính sách, thuật toán hiển thị và chi phí của nền tảng. Điều này gây khó khăn trong việc xây dựng thương hiệu riêng, quản lý dữ liệu khách hàng và duy trì doanh thu ổn định.
-
-**INTROWEAR** được xây dựng nhằm mô phỏng một website thương mại điện tử thời trang độc lập, giúp cửa hàng chủ động quản lý sản phẩm, đơn hàng và khách hàng, đồng thời mang đến cho người dùng trải nghiệm mua sắm trực tuyến thuận tiện từ tìm kiếm sản phẩm đến thanh toán và theo dõi đơn hàng.
+A web-based e-commerce application developed to provide an online fashion shopping platform, allowing customers to browse, purchase, and manage orders while helping store owners manage their business through a centralized system.
 
 ---
 
-# Mục tiêu dự án
+# Introduction
 
-- Xây dựng website bán hàng thời trang trực tuyến.
-- Cung cấp trải nghiệm mua sắm thuận tiện cho khách hàng.
-- Chuẩn hóa quy trình đặt hàng và xử lý đơn hàng.
-- Hỗ trợ quản lý sản phẩm, khách hàng và đơn hàng hiệu quả.
-- Vận dụng kiến thức về Business Analysis, thiết kế hệ thống và phát triển ứng dụng Web.
+The rapid growth of e-commerce marketplaces has helped fashion stores reach more customers. However, many businesses still rely on third-party platforms, making them dependent on platform policies, search algorithms, and service fees. This creates challenges in building their own brand, managing customer data, and maintaining stable business growth.
+
+**INTROWEAR** was developed as an independent fashion e-commerce website that enables store owners to manage products, customers, and orders while providing customers with a convenient online shopping experience—from browsing products to placing orders, making payments, and tracking deliveries.
 
 ---
 
-# Chức năng chính
+# Project Objectives
 
-## Đối với khách hàng
-
-- Đăng ký và đăng nhập tài khoản.
-- Xem danh sách sản phẩm.
-- Tìm kiếm và lọc sản phẩm theo danh mục.
-- Xem thông tin chi tiết sản phẩm.
-- Quản lý giỏ hàng.
-- Đặt hàng.
-- Thanh toán.
-- Theo dõi trạng thái đơn hàng.
-- Xem lịch sử mua hàng.
-- Quản lý thông tin cá nhân.
-
-## Đối với quản trị viên
-
-- Quản lý sản phẩm.
-- Quản lý danh mục.
-- Quản lý khách hàng.
-- Quản lý đơn hàng.
-- Cập nhật trạng thái đơn hàng.
-- Theo dõi doanh thu và thống kê bán hàng.
-- Tìm kiếm và lọc dữ liệu.
+* Build an online fashion shopping website.
+* Provide a convenient shopping experience for customers.
+* Standardize the order placement and order processing workflow.
+* Support efficient management of products, customers, and orders.
+* Apply Business Analysis, system design, and web application development knowledge.
 
 ---
 
-# Kiến trúc hệ thống
+# Main Features
 
-Hệ thống được xây dựng theo kiến trúc **Monolithic Architecture** và tổ chức theo mô hình **Layered Architecture**, bao gồm:
+## Customer
 
-- Presentation Layer
-- Business Logic Layer
-- Data Layer
+* Register and log in.
+* Browse products.
+* Search and filter products by category.
+* View product details.
+* Manage the shopping cart.
+* Place orders.
+* Make payments.
+* Track order status.
+* View order history.
+* Manage personal profile.
 
-Framework **Laravel** được sử dụng để xây dựng các chức năng nghiệp vụ, quản lý routing, authentication, ORM (Eloquent), migration và tương tác với cơ sở dữ liệu MySQL.
+## Administrator
 
----
-
-# Công nghệ sử dụng
-
-- Laravel
-- PHP
-- MySQL
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- Figma
-- Draw.io
-- Git & GitHub
-
----
-
-# Kiến thức áp dụng
-
-Trong quá trình thực hiện dự án, những kiến thức sau được áp dụng:
-
-- Business Analysis.
-- Thu thập và phân tích yêu cầu.
-- Functional Requirements (FR).
-- Non-functional Requirements (NFR).
-- Use Case Diagram.
-- Use Case Specification.
-- Entity Relationship Diagram (ERD).
-- Thiết kế giao diện (UI/UX).
-- Thiết kế cơ sở dữ liệu.
-- Phát triển ứng dụng Web với Laravel.
-- Quản lý mã nguồn bằng Git.
+* Manage products.
+* Manage categories.
+* Manage customers.
+* Manage orders.
+* Update order status.
+* View sales reports and revenue statistics.
+* Search and filter system data.
 
 ---
 
-# Vai trò của tôi
+# System Architecture
+
+The system is built using a **Monolithic Architecture** and follows a **Layered Architecture**, including:
+
+* Presentation Layer
+* Business Logic Layer
+* Data Layer
+
+The **Laravel** framework is used to implement business logic, manage routing, authentication, ORM (Eloquent), database migrations, and interaction with the MySQL database.
+
+---
+
+# Technologies
+
+* Laravel
+* PHP
+* MySQL
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
+* Figma
+* Draw.io
+* Git & GitHub
+
+---
+
+# Knowledge Applied
+
+The following knowledge and techniques were applied during the project:
+
+* Business Analysis
+* Requirements Gathering and Analysis
+* Functional Requirements (FR)
+* Non-functional Requirements (NFR)
+* Use Case Diagram
+* Use Case Specification
+* Entity Relationship Diagram (ERD)
+* UI/UX Design
+* Database Design
+* Web Application Development with Laravel
+* Git Version Control
+
+---
+
+# My Role
 
 **Business Analyst & Developer**
 
 ## Business Analysis
 
-- Thu thập và phân tích yêu cầu nghiệp vụ.
-- Thiết kế Use Case Diagram.
-- Đặc tả Use Case.
-- Thiết kế Entity Relationship Diagram (ERD).
-- Thiết kế giao diện bằng Figma.
+* Gathered and analyzed business requirements.
+* Designed the Use Case Diagram.
+* Wrote Use Case Specifications.
+* Designed the Entity Relationship Diagram (ERD).
+* Created UI wireframes and prototypes using Figma.
 
 ## System Development
 
-- Phát triển chức năng tạo đơn hàng.
-- Phát triển chức năng xác nhận đơn hàng.
-- Xây dựng module quản lý đơn hàng.
-- Xây dựng Dashboard quản trị phục vụ quản lý đơn hàng và thống kê.
+* Developed the order creation feature.
+* Developed the order confirmation feature.
+* Built the order management module.
+* Developed the administration dashboard for order management and sales statistics.
 
 ---
 
-# Cấu trúc repository
+# Repository Structure
 
 ```text
 docs/
@@ -125,31 +125,33 @@ docs/
 src/
 └── Laravel Source Code
 ```
----
-# Hướng dẫn cài đặt và chạy dự án
-
-## Yêu cầu môi trường
-
-Trước khi chạy dự án, cần cài đặt:
-
-- PHP >= 8.2
-- Composer
-- Node.js & npm
-- MySQL
-- Git
 
 ---
 
-## 1. Clone Repository
+# Installation & Setup
+
+## Prerequisites
+
+Before running the project, make sure the following software is installed:
+
+* PHP >= 8.2
+* Composer
+* Node.js & npm
+* MySQL
+* Git
+
+---
+
+## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/introwear.git
-cd introwear
+git clone https://github.com/your-username/INTROWEAR.git
+cd INTROWEAR
 ```
 
 ---
 
-## 2. Cài đặt thư viện
+## 2. Install Dependencies
 
 ```bash
 composer install
@@ -161,15 +163,15 @@ npm install
 
 ---
 
-## 3. Tạo file môi trường
+## 3. Create the Environment File
 
-Linux / macOS
+For Linux/macOS:
 
 ```bash
 cp .env.example .env
 ```
 
-Windows
+For Windows:
 
 ```bash
 copy .env.example .env
@@ -177,7 +179,7 @@ copy .env.example .env
 
 ---
 
-## 4. Sinh Application Key
+## 4. Generate the Application Key
 
 ```bash
 php artisan key:generate
@@ -185,9 +187,9 @@ php artisan key:generate
 
 ---
 
-## 5. Cấu hình cơ sở dữ liệu
+## 5. Configure the Database
 
-Chỉnh sửa file `.env`
+Update the `.env` file with your database information:
 
 ```env
 DB_CONNECTION=mysql
@@ -200,13 +202,13 @@ DB_PASSWORD=your_password
 
 ---
 
-## 6. Khởi tạo cơ sở dữ liệu
+## 6. Run Database Migrations
 
 ```bash
 php artisan migrate
 ```
 
-Nếu dự án có dữ liệu mẫu:
+If sample data is available:
 
 ```bash
 php artisan migrate --seed
@@ -214,13 +216,13 @@ php artisan migrate --seed
 
 ---
 
-## 7. Build Frontend
+## 7. Build Frontend Assets
 
 ```bash
 npm run dev
 ```
 
-Hoặc
+or
 
 ```bash
 npm run build
@@ -228,25 +230,28 @@ npm run build
 
 ---
 
-## 8. Chạy dự án
+## 8. Run the Application
 
 ```bash
 php artisan serve
 ```
 
-Ứng dụng sẽ chạy tại:
+The application will be available at:
 
 ```
 http://127.0.0.1:8000
 ```
 
 ---
-# Kết quả đạt được
 
-Thông qua dự án, nhóm đã xây dựng thành công một hệ thống thương mại điện tử đáp ứng đầy đủ quy trình mua sắm trực tuyến từ tìm kiếm sản phẩm đến quản lý đơn hàng. Dự án cũng giúp nhóm nâng cao kỹ năng phân tích yêu cầu, mô hình hóa hệ thống, thiết kế cơ sở dữ liệu và phát triển ứng dụng Web bằng Laravel.
+# Project Outcomes
+
+The project successfully delivered a complete fashion e-commerce system that supports the entire online shopping process, from product browsing to order management.
+
+Through this project, the team improved skills in business analysis, system modeling, database design, and web application development using Laravel.
 
 ---
 
-# Liên hệ
+# Contact
 
-Nếu có bất kỳ câu hỏi nào về dự án, vui lòng kết nối với tôi thông qua GitHub hoặc LinkedIn.
+If you have any questions about this project, feel free to connect with me through GitHub or LinkedIn.

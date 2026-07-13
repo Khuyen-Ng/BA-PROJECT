@@ -1,41 +1,41 @@
-# Phân tích Kinh doanh - Dự án ERP 123CORP
+# Business Analysis - 123CORP ERP Project
 
-## 1. Bối cảnh Doanh nghiệp
+## 1. Business Context
 
-123CORP là công ty chuyên phân phối thiết bị tin học, thiết bị mạng, NAS, máy in và phụ kiện công nghệ tại thị trường Việt Nam. Công ty hoạt động theo mô hình B2B (dự án) và B2C, với đặc thù:
+123CORP is a company that distributes computing equipment, networking devices, NAS, printers, and accessories in the Vietnamese market. The company operates in both B2B (project) and B2C models, with the following characteristics:
 
-- Quản lý hàng tồn kho lớn với nhiều sản phẩm có **serial number**.
-- Bán hàng chủ yếu theo dự án (báo giá nhiều vòng, thương lượng giá).
-- Nhiều phiên bản cấu hình sản phẩm dễ gây nhầm lẫn.
-- Tồn kho biến động nhanh theo nhu cầu dự án.
+- Large inventory management with many products using **serial numbers**.
+- Sales mostly based on projects (multiple quotation rounds, price negotiation).
+- Many product configuration versions that can cause confusion.
+- Inventory changes rapidly based on project demand.
 
-## 2. Các vấn đề chính
+## 2. Main Issues
 
-- Dữ liệu khách hàng và sản phẩm rời rạc, dễ mất mát.
-- Quy trình Order-to-Cash (báo giá → chốt đơn → giao hàng) thiếu tính nhất quán.
-- Khó kiểm soát tồn kho theo serial number → rủi ro sai sót khi xuất hàng và bảo hành.
-- Thời gian xử lý báo giá và đơn hàng kéo dài do làm thủ công.
-- Ban quản lý thiếu báo cáo thời gian thực để ra quyết định.
-- Khó mở rộng quy mô kinh doanh khi chưa có hệ thống chuẩn.
+- Customer and product data are scattered and prone to loss.
+- The Order-to-Cash process (quotation → order confirmation → delivery) lacks consistency.
+- Difficult to control inventory by serial number → risk of errors during delivery and warranty.
+- Quotation and order processing time is long due to manual work.
+- Management lacks real-time reports for decision-making.
+- Difficult to scale business without a standardized system.
 
-## 3. Mục tiêu triển khai ERP
+## 3. ERP Deployment Objectives
 
-### Mục tiêu chung
-Xây dựng hệ thống ERP tích hợp giúp chuẩn hóa quy trình kinh doanh, nâng cao hiệu quả quản lý tồn kho và tăng khả năng cạnh tranh của 123CORP.
+### General objective
+Build an integrated ERP system to standardize business processes, improve inventory management efficiency, and increase 123CORP's competitiveness.
 
-### Mục tiêu cụ thể
-- Tập trung hóa dữ liệu khách hàng, sản phẩm và tồn kho.
-- Chuẩn hóa quy trình bán hàng (từ báo giá đến chốt đơn và thanh toán).
-- Quản lý tồn kho theo serial number chính xác.
-- Tự động hóa việc tạo báo giá, đơn hàng và gửi email.
-- Cung cấp báo cáo thời gian thực về doanh thu, tồn kho và công nợ.
-- Hỗ trợ phân quyền rõ ràng theo vai trò nhân viên.
+### Specific objectives
+- Centralize customer, product, and inventory data.
+- Standardize the sales process (from quotation to order and payment).
+- Manage inventory accurately by serial number.
+- Automate quotation, order creation, and email sending.
+- Provide real-time reports on revenue, inventory, and receivables.
+- Support clear role-based permissions.
 
-## 5. Phạm vi & Chức năng chính
+## 5. Scope & Main Functions
 
-- **CRM & Sales**: Quản lý Lead, Opportunity, Báo giá, Đơn bán hàng.
-- **Inventory**: Quản lý kho, nhập - xuất kho theo serial number.
-- **Purchase**: Quản lý mua hàng và nhà cung cấp.
-- **Accounting**: Hóa đơn, thanh toán, công nợ (cơ bản).
-- **HRM**: Quản lý nhân sự cơ bản (tùy chọn).
-- Tích hợp email tự động và template tài liệu có thương hiệu.
+- **CRM & Sales**: Manage Leads, Opportunities, Quotations, Sales Orders.
+- **Inventory**: Warehouse management, receipt and issue tracking by serial number.
+- **Purchase**: Manage procurement and suppliers.
+- **Accounting**: Invoices, payments, receivables (basic).
+- **HRM**: Basic personnel management (optional).
+- Integrated automated email and branded document templates.
