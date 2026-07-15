@@ -9,7 +9,7 @@ Looking for a Business Analyst Internship
 
 ## About Me
 
-I'm a third-year student majoring in E-commerce with an interest in Business Analysis.
+I'm a final-year student majoring in E-commerce with an interest in Business Analysis.
 
 Through academic and personal projects, I have practiced gathering requirements, analyzing business processes, creating UML diagrams, writing Use Case Specifications, and designing wireframes in Figma.
 
