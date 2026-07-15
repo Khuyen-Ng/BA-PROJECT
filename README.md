@@ -1,9 +1,9 @@
 # Hi, I'm Nguyen Thi Y Khuyen 
 
-E-commerce student
-Faculty of Information Systems
-University of Information Technology (VNU-HCM)
-Ho Chi Minh City, Vietnam
+Final-year E-commerce student<br>
+University of Information Technology (VNU-HCM)<br>
+Ho Chi Minh City, Vietnam<br>
+Looking for a Business Analyst Internship
 
 Looking for a Business Analyst Internship
 
@@ -13,7 +13,7 @@ Looking for a Business Analyst Internship
 
 I'm interested in Business Analysis and enjoy learning how software systems are designed and developed.
 
-Through academic and personal projects, I have gained hands-on experience in gathering and analyzing business requirements, modeling business processes, creating UML diagrams and ERDs, writing Use Case Specifications, and designing wireframes and mockups in Figma. I have also participated in developing web-based systems, giving me a basic understanding of SQL, programming, and how business requirements are translated into software solutions.
+Through university projects, I have gained hands-on experience in gathering and analyzing business requirements, modeling business processes, creating UML diagrams and ERDs, writing Use Case Specifications, and designing wireframes and mockups in Figma. I have also participated in developing web-based systems, giving me a basic understanding of SQL, programming, and how business requirements are translated into software solutions.
 
 I'm looking for an internship where I can continue learning, gain hands-on experience, and contribute to software projects as a Business Analyst.
 
