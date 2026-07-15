@@ -12,7 +12,7 @@ Looking for a Business Analyst Internship.
 
 I'm interested in Business Analysis and enjoy learning how software systems are designed and developed.
 
-Through university projects, I have gained experience in requirement gathering and analysis, writing Business Requirements, Functional Requirements (FR), Non-functional Requirements (NFR), User Stories, and Use Case Specifications. I have also modeled business processes, created UML diagrams and ERDs, and designed wireframes and mockups in Figma. In addition, I have basic knowledge of SQL and programming, which helps me better understand how software systems are designed and developed.
+Through university projects, I have gained experience in requirement gathering and analysis, writing Business Requirements, Functional Requirements (FR), Non-functional Requirements (NFR), User Stories, and Use Case Specifications. I have also modeled business processes, created UML diagrams and ERDs, and designed wireframes and mockups. In addition, I have basic knowledge of SQL and programming, which helps me better understand how software systems are designed and developed.
 
 I'm looking for a Business Analyst Internship where I can continue learning, gain hands-on experience, and make meaningful contributions to Business Analysis activities.
 
