@@ -1,6 +1,6 @@
 # Hi, I'm Nguyen Thi Y Khuyen 
 
-Third-year E-commerce student, Faculty of Information Systems
+Final-year E-commerce student, Faculty of Information Systems
 University of Information Technology (VNU-HCM)
 Ho Chi Minh City, Vietnam
 Looking for a Business Analyst Internship
