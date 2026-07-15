@@ -42,10 +42,10 @@ I'm looking for an internship where I can continue learning, gain hands-on exper
 ### Technical Skills
 
 * SQL
-* PHP (Basic)
-* Python (Basic)
+* PHP
+* Python
 * HTML/CSS
-* MySQL
+* C++
 
 ### Tools
 
