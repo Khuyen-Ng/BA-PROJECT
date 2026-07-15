@@ -3,7 +3,6 @@
 Final-year E-commerce student<br>
 University of Information Technology (VNU-HCM)<br>
 Ho Chi Minh City, Vietnam<br>
-Looking for a Business Analyst Internship
 
 Looking for a Business Analyst Internship
 
